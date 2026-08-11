@@ -582,5 +582,27 @@ export const PRODUCTS: Product[] = [
     ],
     stock: 14,
     badge: 'Home Essential'
+  },
+  {
+    id: 'mobile-holder',
+    name : 'Osmo Mobile 8 Gimbal Stabilizer for Phone, 3-Axis Stabilization',
+    price : 110.99,
+    originalPrice : 199.99,
+    rating : 4.8,
+    reviewsCount : 210,
+    category : 'electronics',
+    image : '/images/mobile-holder.jpg',
+    description : 'Professional 3-axis gimbal stabilizer for smartphones with active tracking and gesture control.',
+    longDescription : 'Capture smooth, cinematic footage with the Osmo Mobile 8 Gimbal Stabilizer. This advanced device features a 3-axis stabilization system that eliminates shake and jitter, allowing you to record professional-quality videos with your smartphone. It also includes active tracking, gesture control, and a variety of shooting modes to enhance your filming experience.',
+    features : [
+      '3-axis stabilization for smooth video capture',
+      'Active tracking technology for following subjects automatically',
+      'Gesture control for hands-free operation',
+      'Multiple shooting modes including panorama and time-lapse',
+      'Lightweight and portable design for easy transport'
+    ],
+    stock : 25,
+    
+    
   }
 ];
