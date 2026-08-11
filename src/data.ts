@@ -602,7 +602,47 @@ export const PRODUCTS: Product[] = [
       'Lightweight and portable design for easy transport'
     ],
     stock : 25,
-    
-    
+  },
+  {
+    id: 'zero-sugar',
+    name : 'Zero Sugar Electrolytes | 30-Count ',
+    price : 80.99,
+    originalPrice : 100.99,
+    rating : 4.9,
+    reviewsCount : 150,
+    category : 'beverages',
+    image : '/images/Zero-Sugar-Electrolytes.jpg',
+    description : 'LMNT Zero Sugar Electrolytes - Raw Unflavored Salt | Drink Mix | 30-Count.',
+    longDescription : 'Stay energized without the sugar crash with our Zero Sugar Energy Drink. Packed with natural flavors and electrolytes, this beverage provides a boost of energy while keeping you hydrated. Perfect for workouts, long drives, or any time you need a pick-me-up.',
+    features : [
+      'Zero sugar formula for guilt-free energy',
+      'Infused with electrolytes for hydration',
+      'Natural flavors for a refreshing taste',
+      'Convenient 12-pack for on-the-go energy',
+      'No artificial colors or preservatives'
+    ],
+    stock : 50,
+    badge : 'Healthy Choice'
+  },
+  {
+    id: 'computer-desk',
+    name : ' Height Adjustable Computer Desk',
+    price : 120.99,
+    originalPrice : 200,
+    rating : 4.8,
+    reviewsCount : 120,
+    category : 'home',
+    image : '/images/height-adjustable-computer-desk.jpg',
+    description : 'Ergonomic height adjustable computer desk with spacious work surface and cable management system.',
+    longDescription : 'Enhance your productivity and comfort with our Height Adjustable Computer Desk. Designed for both sitting and standing positions, this desk features a spacious work surface, sturdy frame, and an integrated cable management system to keep your workspace organized.',
+    features : [
+      'Height adjustable for sitting or standing use',
+      'Spacious work surface for monitors, laptops, and accessories',
+      'Sturdy steel frame for stability and durability',
+      'Integrated cable management system to reduce clutter',
+      'Easy assembly with included instructions and tools'
+    ],
+    stock : 20,
+    badge : 'Office Essential'
   }
 ];
