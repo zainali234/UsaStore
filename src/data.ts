@@ -644,5 +644,26 @@ export const PRODUCTS: Product[] = [
     ],
     stock : 20,
     badge : 'Office Essential'
+  },
+  {
+    id: 'dog grooming',
+    name: 'Dog Grooming Vacuum',
+    price: 90.99,
+    originalPrice: 150.99,
+    rating: 4.7,
+    reviewsCount: 85,
+    category: 'pet',
+    image: '/images/grooming-vacuum.jpg',
+    description: 'Pet grooming vacuum with adjustable suction and multiple attachments for safe and effective grooming.',
+    longDescription: 'Keep your furry friends looking their best with our Dog Grooming Vacuum. This versatile tool features adjustable suction power and comes with multiple attachments to safely groom your pets, removing loose hair and reducing shedding.',
+    features: [
+      '1.5L Dust Cup Dog deshedding Brush with 7 Tools for Shedding Pet Hair',
+      '11kPa Strong Suction, 59dB Low Noise,Clipper & Nail Grinder Included',
+      '7-in-1 Grooming Kit, Deshedding Brush, 1.5L Dust Cup',
+      '7 in 1 Pro Pet Grooming Kit, Keep the House Tidy: oneisall pet grooming kit with vacuum make home grooming easy',
+      'Compact and lightweight design for easy handling'
+    ],
+    stock: 15,
+    badge: 'Pet Care'
   }
 ];
