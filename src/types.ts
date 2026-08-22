@@ -1,3 +1,5 @@
+export type Currency = 'USD' | 'GBP';
+
 export interface Product {
   id: string;
   name: string;
@@ -32,6 +34,9 @@ export interface CheckoutDetails {
   state: string;
   postalCode: string;
   country: string;
+  currency?: Currency;
+  totalPaidFormatted?: string;
+  bankRegion?: 'UK' | 'US';
   amazonProfileUrl?: string;
   paypalAccount?: string;
   paymentMethod?: string;

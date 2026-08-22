@@ -1,16 +1,19 @@
 import React from 'react';
 import { Star, Eye, ShoppingCart } from 'lucide-react';
-import { Product } from '../types';
+import { Product, Currency } from '../types';
+import { formatPrice } from '../currency';
 
 interface ProductCardProps {
   key?: any;
   product: Product;
+  currency?: Currency;
   onViewDetails: (product: Product) => void;
   onAddToCart: (product: Product, event: React.MouseEvent) => void;
 }
 
 export default function ProductCard({
   product,
+  currency = 'USD',
   onViewDetails,
   onAddToCart,
 }: ProductCardProps) {
@@ -100,11 +103,11 @@ export default function ProductCard({
           <div>
             <div className="flex items-baseline gap-1.5 flex-wrap">
               <span className="text-base sm:text-lg font-bold font-mono text-slate-900">
-                ${product.price.toFixed(2)}
+                {formatPrice(product.price, currency)}
               </span>
               {product.originalPrice && (
                 <span className="text-xs text-slate-400 line-through font-mono">
-                  ${product.originalPrice.toFixed(2)}
+                  {formatPrice(product.originalPrice, currency)}
                 </span>
               )}
             </div>

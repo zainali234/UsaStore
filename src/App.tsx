@@ -28,7 +28,7 @@ import {
 } from 'lucide-react';
 
 import { PRODUCTS, CATEGORIES } from './data';
-import { Product, CartItem, CheckoutDetails } from './types';
+import { Product, CartItem, CheckoutDetails, Currency } from './types';
 
 // Importing custom components safely
 import Header, { AppTab } from './components/Header';
@@ -49,6 +49,10 @@ export default function App() {
   const [currentTab, setTab] = useState<AppTab>('shop');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
+  const [currency, setCurrency] = useState<Currency>(() => {
+    const cached = localStorage.getItem('mamazon_currency');
+    return (cached === 'GBP' || cached === 'USD') ? cached : 'USD';
+  });
   
   // Selected product for individual specs view
   const [activeProduct, setActiveProduct] = useState<Product | null>(null);
@@ -62,6 +66,11 @@ export default function App() {
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [isCheckoutMode, setIsCheckoutMode] = useState(false);
   const [orderedDetails, setOrderedDetails] = useState<CheckoutDetails | null>(null);
+
+  // Synchronize currency with storage
+  useEffect(() => {
+    localStorage.setItem('mamazon_currency', currency);
+  }, [currency]);
 
   // Synchronize state with browser URL (search params)
   useEffect(() => {
@@ -236,6 +245,8 @@ export default function App() {
         cartCount={cartCount}
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
+        currency={currency}
+        setCurrency={setCurrency}
         onCartClick={() => {
           setIsCartOpen(true);
           setIsCheckoutMode(false);
@@ -313,17 +324,23 @@ export default function App() {
                   </div>
                 </div>
 
-                <div className="pt-2 border-t border-slate-200/80 flex items-center justify-between text-xs">
+                <div className="pt-2 border-t border-slate-200/80 flex flex-wrap items-center justify-between gap-2 text-xs">
                   <div className="flex items-center gap-2">
                     <span className="text-[10px] font-bold text-slate-400 uppercase font-mono">Payment Status:</span>
                     <span className="bg-emerald-100 text-emerald-800 font-bold px-2.5 py-0.5 rounded-md text-[11px]">
-                      Bank Transfer Receipt Verified
+                      {orderedDetails.bankRegion === 'UK' ? '🇬🇧 UK Bank Transfer (GBP £) Verified' : '🇺🇸 US Bank Transfer (USD $) Verified'}
                     </span>
                   </div>
+                  {orderedDetails.totalPaidFormatted && (
+                    <div className="flex items-center gap-1.5 font-mono font-bold text-slate-900 text-xs">
+                      <span>Total Paid:</span>
+                      <span className="text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">{orderedDetails.totalPaidFormatted}</span>
+                    </div>
+                  )}
                   {orderedDetails.paymentScreenshot && (
                     <div className="flex items-center gap-1.5 text-slate-600 text-xs font-medium">
                       <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                      <span>Screenshot SS Received</span>
+                      <span>Screenshot SS Attached</span>
                     </div>
                   )}
                 </div>
@@ -360,12 +377,15 @@ export default function App() {
             {isCheckoutMode ? (
               <Checkout
                 cartItems={cartItems}
+                currency={currency}
+                onCurrencyChange={setCurrency}
                 onBackToCart={() => setIsCheckoutMode(false)}
                 onOrderSuccess={handleOrderSuccess}
               />
             ) : (
               <Cart
                 cartItems={cartItems}
+                currency={currency}
                 onUpdateQty={handleUpdateQty}
                 onRemoveItem={handleRemoveItem}
                 onCheckout={() => setIsCheckoutMode(true)}
@@ -382,6 +402,7 @@ export default function App() {
           >
             <ProductDetail
               product={activeProduct}
+              currency={currency}
               onBack={handleCloseProduct}
               onAddToCart={(prod, qty, color) => {
                 handleAddToCart(prod, qty, color);
@@ -502,6 +523,7 @@ export default function App() {
                     <ProductCard
                       key={prod.id}
                       product={prod}
+                      currency={currency}
                       onViewDetails={handleOpenProduct}
                       onAddToCart={handleQuickAddToCart}
                     />

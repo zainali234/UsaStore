@@ -27,6 +27,8 @@ export type AppTab =
   | 'refund' 
   | 'shipping';
 
+import { Currency } from '../types';
+
 interface HeaderProps {
   currentTab: AppTab;
   setTab: (tab: AppTab) => void;
@@ -34,6 +36,8 @@ interface HeaderProps {
   searchQuery: string;
   setSearchQuery: (query: string) => void;
   onCartClick: () => void;
+  currency: Currency;
+  setCurrency: (c: Currency) => void;
 }
 
 export default function Header({
@@ -43,9 +47,12 @@ export default function Header({
   searchQuery,
   setSearchQuery,
   onCartClick,
+  currency,
+  setCurrency,
 }: HeaderProps) {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [mobilePoliciesOpen, setMobilePoliciesOpen] = useState(false);
+  const [currencyDropdownOpen, setCurrencyDropdownOpen] = useState(false);
 
   const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
   const closeDropdown = () => setDropdownOpen(false);
@@ -193,10 +200,67 @@ export default function Header({
             </button>
           </nav>
 
-          {/* Right Area - Search Inputs & Cart Indicator */}
-          <div className="flex items-center gap-3 w-auto">
+          {/* Right Area - Currency Switcher, Search Inputs & Cart Indicator */}
+          <div className="flex items-center gap-2.5 w-auto">
+            {/* Currency Region Selector Button */}
+            <div className="relative">
+              <button
+                type="button"
+                onClick={() => setCurrencyDropdownOpen(!currencyDropdownOpen)}
+                className="px-2.5 py-1.5 bg-slate-900 hover:bg-slate-800 border border-slate-700/80 rounded-xl text-xs font-bold text-slate-200 hover:text-white flex items-center gap-1.5 transition-all shadow-xs cursor-pointer"
+                title="Change Store Currency & Region"
+              >
+                <span className="text-sm leading-none">{currency === 'GBP' ? '🇬🇧' : '🇺🇸'}</span>
+                <span className="font-mono text-amber-400">{currency === 'GBP' ? 'GBP (£)' : 'USD ($)'}</span>
+                <ChevronDown className={`w-3 h-3 text-slate-400 transition-transform ${currencyDropdownOpen ? 'rotate-180' : ''}`} />
+              </button>
+
+              {currencyDropdownOpen && (
+                <div
+                  className="absolute right-0 mt-1.5 w-44 bg-slate-950 border border-amber-500/25 rounded-xl shadow-2xl py-1.5 z-50 animate-fade-in"
+                  onMouseLeave={() => setCurrencyDropdownOpen(false)}
+                >
+                  <div className="px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-500 font-mono border-b border-slate-900">
+                    Select Currency
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setCurrency('GBP');
+                      setCurrencyDropdownOpen(false);
+                    }}
+                    className={`w-full text-left px-3 py-2 text-xs font-semibold flex items-center justify-between hover:bg-slate-900 transition-colors cursor-pointer ${
+                      currency === 'GBP' ? 'text-amber-400 bg-slate-900/60' : 'text-slate-300'
+                    }`}
+                  >
+                    <span className="flex items-center gap-2">
+                      <span className="text-sm">🇬🇧</span>
+                      <span>GBP - British Pound</span>
+                    </span>
+                    <span className="font-mono font-bold text-amber-500">£</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setCurrency('USD');
+                      setCurrencyDropdownOpen(false);
+                    }}
+                    className={`w-full text-left px-3 py-2 text-xs font-semibold flex items-center justify-between hover:bg-slate-900 transition-colors cursor-pointer ${
+                      currency === 'USD' ? 'text-amber-400 bg-slate-900/60' : 'text-slate-300'
+                    }`}
+                  >
+                    <span className="flex items-center gap-2">
+                      <span className="text-sm">🇺🇸</span>
+                      <span>USD - US Dollar</span>
+                    </span>
+                    <span className="font-mono font-bold text-amber-500">$</span>
+                  </button>
+                </div>
+              )}
+            </div>
+
             {currentTab === 'shop' && (
-              <div className="relative hidden lg:block w-72">
+              <div className="relative hidden lg:block w-64 xl:w-72">
                 <input
                   type="text"
                   placeholder="Search Amazon goods..."

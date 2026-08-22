@@ -1,14 +1,21 @@
 import React, { useState } from 'react';
 import { ArrowLeft, Star, Trash2, Plus, Minus, ShoppingCart, ShieldCheck, Truck, RefreshCw } from 'lucide-react';
-import { Product } from '../types';
+import { Product, Currency } from '../types';
+import { formatPrice, convertPrice, getCurrencySymbol } from '../currency';
 
 interface ProductDetailProps {
   product: Product;
+  currency?: Currency;
   onBack: () => void;
   onAddToCart: (product: Product, quantity: number, selectedColor?: string) => void;
 }
 
-export default function ProductDetail({ product, onBack, onAddToCart }: ProductDetailProps) {
+export default function ProductDetail({ 
+  product, 
+  currency = 'USD', 
+  onBack, 
+  onAddToCart 
+}: ProductDetailProps) {
   const [quantity, setQuantity] = useState(1);
   const [selectedColor, setSelectedColor] = useState(
     product.colors && product.colors.length > 0 ? product.colors[0] : undefined
@@ -16,6 +23,9 @@ export default function ProductDetail({ product, onBack, onAddToCart }: ProductD
 
   const incrementQty = () => setQuantity(prev => Math.min(prev + 1, product.stock));
   const decrementQty = () => setQuantity(prev => Math.max(prev - 1, 1));
+
+  const totalCalculatedPrice = convertPrice(product.price * quantity, currency);
+  const currencySym = getCurrencySymbol(currency);
 
   return (
     <div className="bg-white min-h-screen">
@@ -111,16 +121,16 @@ export default function ProductDetail({ product, onBack, onAddToCart }: ProductD
                 <span className="text-[11px] font-mono text-slate-400 font-bold uppercase tracking-wider block">Special VIP Store Price</span>
                 <div className="flex items-baseline gap-3">
                   <span className="text-3xl sm:text-4xl font-extrabold font-mono text-slate-950">
-                    ${product.price.toFixed(2)}
+                    {formatPrice(product.price, currency)}
                   </span>
                   {product.originalPrice && (
                     <span className="text-lg text-slate-400 line-through font-mono">
-                      ${product.originalPrice.toFixed(2)}
+                      {formatPrice(product.originalPrice, currency)}
                     </span>
                   )}
                   {product.originalPrice && (
                     <span className="bg-rose-100 text-rose-700 text-xs font-bold px-2 py-0.5 rounded-md">
-                      Save ${(product.originalPrice - product.price).toFixed(2)}
+                      Save {formatPrice(product.originalPrice - product.price, currency)}
                     </span>
                   )}
                 </div>
@@ -210,7 +220,7 @@ export default function ProductDetail({ product, onBack, onAddToCart }: ProductD
                   className="flex-1 inline-flex items-center justify-center p-3 sm:p-3.5 bg-amber-500 hover:bg-amber-600 text-white font-semibold text-sm rounded-xl transition-all duration-200 cursor-pointer shadow-md shadow-amber-500/10 gap-2"
                 >
                   <ShoppingCart className="w-4 h-4 text-white" />
-                  Add to Cart • ${(product.price * quantity).toFixed(2)}
+                  Add to Cart • {formatPrice(product.price * quantity, currency)}
                 </button>
               </div>
 
