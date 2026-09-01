@@ -1,9 +1,11 @@
 import React from 'react';
 import { Trash2, Plus, Minus, ArrowRight, ArrowLeft, ShoppingBag } from 'lucide-react';
-import { CartItem } from '../types';
+import { CartItem, Currency } from '../types';
+import { formatPrice } from '../currency';
 
 interface CartProps {
   cartItems: CartItem[];
+  currency?: Currency;
   onUpdateQty: (productId: string, quantity: number, selectedColor?: string) => void;
   onRemoveItem: (productId: string, selectedColor?: string) => void;
   onCheckout: () => void;
@@ -12,6 +14,7 @@ interface CartProps {
 
 export default function Cart({
   cartItems,
+  currency = 'USD',
   onUpdateQty,
   onRemoveItem,
   onCheckout,
@@ -19,7 +22,7 @@ export default function Cart({
 }: CartProps) {
   const subtotal = cartItems.reduce((acc, item) => acc + item.product.price * item.quantity, 0);
   const deliveryFee = 0; // Free Prime delivery
-  const estimatedTax = subtotal * 0.08; // 8% estimated sales tax
+  const estimatedTax = subtotal * 0.08; // 8% estimated sales tax / VAT
   const total = subtotal + deliveryFee + estimatedTax;
 
   if (cartItems.length === 0) {
@@ -87,11 +90,11 @@ export default function Cart({
                 )}
                 <div className="pt-1.5 flex items-baseline justify-center sm:justify-start gap-2">
                   <span className="text-base font-bold font-mono text-slate-900">
-                    ${item.product.price.toFixed(2)}
+                    {formatPrice(item.product.price, currency)}
                   </span>
                   {item.product.originalPrice && (
                     <span className="text-xs text-slate-400 line-through font-mono">
-                      ${item.product.originalPrice.toFixed(2)}
+                      {formatPrice(item.product.originalPrice, currency)}
                     </span>
                   )}
                 </div>
@@ -122,7 +125,7 @@ export default function Cart({
 
                 <div className="flex items-center gap-3">
                   <span className="text-sm font-bold font-mono text-slate-900 hidden sm:inline">
-                    ${(item.product.price * item.quantity).toFixed(2)}
+                    {formatPrice(item.product.price * item.quantity, currency)}
                   </span>
                   <button
                     onClick={() => onRemoveItem(item.product.id, item.selectedColor)}
@@ -155,11 +158,11 @@ export default function Cart({
           <div className="space-y-3 pt-2 text-sm">
             <div className="flex justify-between text-slate-500">
               <span>Cart Subtotal</span>
-              <span className="font-mono text-slate-800 font-semibold">${subtotal.toFixed(2)}</span>
+              <span className="font-mono text-slate-800 font-semibold">{formatPrice(subtotal, currency)}</span>
             </div>
             <div className="flex justify-between text-slate-500">
-              <span>Estimated Sales Tax (8%)</span>
-              <span className="font-mono text-slate-800 font-semibold">${estimatedTax.toFixed(2)}</span>
+              <span>Estimated {currency === 'GBP' ? 'VAT (8%)' : 'Sales Tax (8%)'}</span>
+              <span className="font-mono text-slate-800 font-semibold">{formatPrice(estimatedTax, currency)}</span>
             </div>
             <div className="flex justify-between text-slate-500">
               <span>Delivery Fee</span>
@@ -170,7 +173,7 @@ export default function Cart({
 
             <div className="flex justify-between text-slate-800 font-bold text-base">
               <span>Total Price Due</span>
-              <span className="font-mono text-slate-950 text-lg">${total.toFixed(2)}</span>
+              <span className="font-mono text-slate-950 text-lg">{formatPrice(total, currency)}</span>
             </div>
           </div>
 

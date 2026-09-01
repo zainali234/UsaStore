@@ -1,14 +1,23 @@
-import React, { useState } from 'react';
-import { ArrowLeft, Copy, Check, Upload, X, Image as ImageIcon, Building2, ShieldCheck, CheckCircle2, AlertCircle, FileText } from 'lucide-react';
-import { CartItem, CheckoutDetails } from '../types';
+import React, { useState, useEffect } from 'react';
+import { ArrowLeft, Copy, Check, Upload, X, Image as ImageIcon, Building2, ShieldCheck, CheckCircle2, AlertCircle, FileText, Globe } from 'lucide-react';
+import { CartItem, CheckoutDetails, Currency } from '../types';
+import { BANK_DETAILS, formatPrice, convertPrice, getCurrencySymbol } from '../currency';
 
 interface CheckoutProps {
   cartItems: CartItem[];
+  currency?: Currency;
+  onCurrencyChange?: (c: Currency) => void;
   onBackToCart: () => void;
   onOrderSuccess: (details: CheckoutDetails) => void;
 }
 
-export default function Checkout({ cartItems, onBackToCart, onOrderSuccess }: CheckoutProps) {
+export default function Checkout({ 
+  cartItems, 
+  currency = 'USD',
+  onCurrencyChange,
+  onBackToCart, 
+  onOrderSuccess 
+}: CheckoutProps) {
   const [formData, setFormData] = useState<CheckoutDetails>({
     fullName: '',
     email: '',
@@ -18,12 +27,14 @@ export default function Checkout({ cartItems, onBackToCart, onOrderSuccess }: Ch
     city: '',
     state: '',
     postalCode: '',
-    country: 'United States',
+    country: currency === 'GBP' ? 'United Kingdom' : 'United States',
+    currency: currency,
     paymentMethod: 'bank_transfer',
   });
 
   const [errorMessage, setErrorMessage] = useState('');
   const [showBankModal, setShowBankModal] = useState(false);
+  const [selectedBankRegion, setSelectedBankRegion] = useState<'UK' | 'US'>(currency === 'GBP' ? 'UK' : 'US');
   
   // Bank modal state
   const [screenshot, setScreenshot] = useState<string | null>(null);
@@ -36,9 +47,34 @@ export default function Checkout({ cartItems, onBackToCart, onOrderSuccess }: Ch
   const tax = subtotal * 0.08;
   const total = subtotal + tax;
 
+  // Sync bank region when currency or country changes
+  useEffect(() => {
+    if (formData.country === 'United Kingdom') {
+      setSelectedBankRegion('UK');
+      if (currency !== 'GBP' && onCurrencyChange) {
+        onCurrencyChange('GBP');
+      }
+    } else if (formData.country === 'United States') {
+      setSelectedBankRegion('US');
+      if (currency !== 'USD' && onCurrencyChange) {
+        onCurrencyChange('USD');
+      }
+    }
+  }, [formData.country]);
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
+    
+    if (name === 'country') {
+      if (value === 'United Kingdom') {
+        setSelectedBankRegion('UK');
+        if (onCurrencyChange) onCurrencyChange('GBP');
+      } else if (value === 'United States') {
+        setSelectedBankRegion('US');
+        if (onCurrencyChange) onCurrencyChange('USD');
+      }
+    }
   };
 
   const handleOpenBankModal = (e?: React.FormEvent) => {
@@ -49,6 +85,12 @@ export default function Checkout({ cartItems, onBackToCart, onOrderSuccess }: Ch
     if (!formData.fullName || !formData.email || !formData.phone || !formData.addressLine1 || !formData.city || !formData.state || !formData.postalCode) {
       setErrorMessage('Please complete all standard shipping address fields to proceed.');
       return;
+    }
+
+    if (formData.country === 'United Kingdom') {
+      setSelectedBankRegion('UK');
+    } else {
+      setSelectedBankRegion(currency === 'GBP' ? 'UK' : 'US');
     }
 
     setShowBankModal(true);
@@ -79,6 +121,9 @@ export default function Checkout({ cartItems, onBackToCart, onOrderSuccess }: Ch
     }
   };
 
+  const currentDisplayCurrency: Currency = selectedBankRegion === 'UK' ? 'GBP' : 'USD';
+  const totalAmountInRegion = formatPrice(total, currentDisplayCurrency);
+
   const handleCompleteOrder = () => {
     setModalError('');
     if (!screenshot) {
@@ -93,6 +138,9 @@ export default function Checkout({ cartItems, onBackToCart, onOrderSuccess }: Ch
       setShowBankModal(false);
       onOrderSuccess({
         ...formData,
+        currency: currentDisplayCurrency,
+        totalPaidFormatted: totalAmountInRegion,
+        bankRegion: selectedBankRegion,
         paymentScreenshot: screenshot,
       });
     }, 1500);
@@ -112,9 +160,15 @@ export default function Checkout({ cartItems, onBackToCart, onOrderSuccess }: Ch
         {/* Left Column: Shipping Address Form */}
         <div className="lg:col-span-2 space-y-6">
           <div className="bg-white border border-slate-200/80 p-6 sm:p-8 rounded-2xl shadow-xs space-y-5">
-            <h3 className="text-lg font-bold font-sans text-slate-900 border-b border-slate-100 pb-3 flex items-center gap-2">
-              <span className="w-6 h-6 bg-amber-500 rounded-full text-slate-950 text-xs font-black flex items-center justify-center">1</span>
-              Prime Delivery Shipping Address
+            <h3 className="text-lg font-bold font-sans text-slate-900 border-b border-slate-100 pb-3 flex items-center justify-between">
+              <span className="flex items-center gap-2">
+                <span className="w-6 h-6 bg-amber-500 rounded-full text-slate-950 text-xs font-black flex items-center justify-center">1</span>
+                Prime Delivery Shipping Address
+              </span>
+              <span className="text-xs font-mono font-semibold px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 flex items-center gap-1.5">
+                <Globe className="w-3.5 h-3.5 text-amber-500" />
+                {formData.country === 'United Kingdom' ? '🇬🇧 UK Delivery (GBP £)' : '🇺🇸 US Delivery (USD $)'}
+              </span>
             </h3>
 
             {errorMessage && (
@@ -159,7 +213,7 @@ export default function Checkout({ cartItems, onBackToCart, onOrderSuccess }: Ch
                   type="tel"
                   name="phone"
                   required
-                  placeholder="+1 (555) 019-2834"
+                  placeholder={formData.country === 'United Kingdom' ? '+44 20 7946 0912' : '+1 (555) 019-2834'}
                   value={formData.phone}
                   onChange={handleInputChange}
                   className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-hidden focus:ring-2 focus:ring-amber-500/20 focus:border-amber-500"
@@ -167,19 +221,26 @@ export default function Checkout({ cartItems, onBackToCart, onOrderSuccess }: Ch
               </div>
 
               <div>
-                <label className="text-xs font-bold text-slate-700 uppercase tracking-wider block mb-1.5">Country</label>
+                <label className="text-xs font-bold text-slate-700 uppercase tracking-wider block mb-1.5">
+                  Country / Region
+                </label>
                 <select
                   name="country"
                   value={formData.country}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-hidden focus:ring-2 focus:ring-amber-500/20 focus:border-amber-500"
+                  className="w-full px-4 py-2.5 rounded-xl border border-amber-300/80 bg-amber-50/20 text-sm font-semibold text-slate-900 focus:outline-hidden focus:ring-2 focus:ring-amber-500/20 focus:border-amber-500"
                 >
-                  <option value="United States">United States</option>
-                  <option value="United Kingdom">United Kingdom</option>
-                  <option value="Canada">Canada</option>
-                  <option value="Germany">Germany</option>
-                  <option value="France">France</option>
+                  <option value="United Kingdom">🇬🇧 United Kingdom (Pound GBP - UK Bank)</option>
+                  <option value="United States">🇺🇸 United States (Dollar USD - US Bank)</option>
+                  <option value="Canada">🇨🇦 Canada</option>
+                  <option value="Germany">🇩🇪 Germany</option>
+                  <option value="France">🇫🇷 France</option>
                 </select>
+                <span className="text-[11px] text-amber-700 block mt-1">
+                  {formData.country === 'United Kingdom' 
+                    ? '✓ UK Bank Details & GBP (£) automatically selected' 
+                    : '✓ US Bank Details & USD ($) automatically selected'}
+                </span>
               </div>
             </div>
 
@@ -190,7 +251,7 @@ export default function Checkout({ cartItems, onBackToCart, onOrderSuccess }: Ch
                   type="text"
                   name="addressLine1"
                   required
-                  placeholder="123 Main Street"
+                  placeholder={formData.country === 'United Kingdom' ? '10 Downing Street' : '123 Main Street'}
                   value={formData.addressLine1}
                   onChange={handleInputChange}
                   className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-hidden focus:ring-2 focus:ring-amber-500/20 focus:border-amber-500"
@@ -202,7 +263,7 @@ export default function Checkout({ cartItems, onBackToCart, onOrderSuccess }: Ch
                 <input
                   type="text"
                   name="addressLine2"
-                  placeholder="Apt 4B / Suite"
+                  placeholder="Flat 4 / Suite"
                   value={formData.addressLine2}
                   onChange={handleInputChange}
                   className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-hidden focus:ring-2 focus:ring-amber-500/20 focus:border-amber-500"
@@ -217,7 +278,7 @@ export default function Checkout({ cartItems, onBackToCart, onOrderSuccess }: Ch
                   type="text"
                   name="city"
                   required
-                  placeholder="New York"
+                  placeholder={formData.country === 'United Kingdom' ? 'London' : 'New York'}
                   value={formData.city}
                   onChange={handleInputChange}
                   className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-hidden focus:ring-2 focus:ring-amber-500/20 focus:border-amber-500"
@@ -225,12 +286,14 @@ export default function Checkout({ cartItems, onBackToCart, onOrderSuccess }: Ch
               </div>
 
               <div>
-                <label className="text-xs font-bold text-slate-700 uppercase tracking-wider block mb-1.5">State / Region</label>
+                <label className="text-xs font-bold text-slate-700 uppercase tracking-wider block mb-1.5">
+                  {formData.country === 'United Kingdom' ? 'County' : 'State / Region'}
+                </label>
                 <input
                   type="text"
                   name="state"
                   required
-                  placeholder="NY"
+                  placeholder={formData.country === 'United Kingdom' ? 'Greater London' : 'NY'}
                   value={formData.state}
                   onChange={handleInputChange}
                   className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-hidden focus:ring-2 focus:ring-amber-500/20 focus:border-amber-500"
@@ -238,12 +301,14 @@ export default function Checkout({ cartItems, onBackToCart, onOrderSuccess }: Ch
               </div>
 
               <div>
-                <label className="text-xs font-bold text-slate-700 uppercase tracking-wider block mb-1.5">ZIP / Postal Code</label>
+                <label className="text-xs font-bold text-slate-700 uppercase tracking-wider block mb-1.5">
+                  {formData.country === 'United Kingdom' ? 'Postcode' : 'ZIP / Postal Code'}
+                </label>
                 <input
                   type="text"
                   name="postalCode"
                   required
-                  placeholder="10001"
+                  placeholder={formData.country === 'United Kingdom' ? 'SW1A 2AA' : '10001'}
                   value={formData.postalCode}
                   onChange={handleInputChange}
                   className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-hidden focus:ring-2 focus:ring-amber-500/20 focus:border-amber-500"
@@ -252,20 +317,32 @@ export default function Checkout({ cartItems, onBackToCart, onOrderSuccess }: Ch
             </div>
           </div>
 
+          {/* Bank Payment Method Info Card */}
           <div className="bg-amber-50/60 border border-amber-200/80 p-5 rounded-2xl flex items-center gap-3">
             <Building2 className="w-6 h-6 text-amber-600 shrink-0" />
             <div className="text-xs text-slate-700 leading-relaxed">
-              <span className="font-bold text-slate-900 block">Direct Bank Deposit Method</span>
-              Clicking <span className="font-bold text-amber-700">Pay & Complete Secure Order</span> will display our direct US bank details (Account Holder: <span className="font-bold text-slate-900">faran ahmed</span>) and upload input for transfer receipt screenshot.
+              <span className="font-bold text-slate-900 block">
+                {formData.country === 'United Kingdom' ? '🇬🇧 Direct UK Bank Transfer (GBP £)' : '🇺🇸 Direct US Bank Transfer (USD $)'}
+              </span>
+              {formData.country === 'United Kingdom' ? (
+                <>Clicking <span className="font-bold text-amber-700">Pay & Complete Secure Order</span> will display our UK Bank Details (<span className="font-bold text-slate-900">iFAST Global Bank - Zain Ali Ahmad</span>, Sort Code: <span className="font-bold">04-00-01</span>) and upload input for transfer receipt.</>
+              ) : (
+                <>Clicking <span className="font-bold text-amber-700">Pay & Complete Secure Order</span> will display our US Bank Details (<span className="font-bold text-slate-900">JP Morgan Chase - faran ahmed</span>, Routing: <span className="font-bold">028000024</span>) and upload input for transfer receipt.</>
+              )}
             </div>
           </div>
         </div>
 
         {/* Right Column: Order Summary & Checkout Button */}
         <div className="bg-slate-50 border border-slate-200/80 p-6 rounded-2xl space-y-5 lg:sticky lg:top-28 shadow-xs">
-          <h3 className="text-slate-900 font-bold text-base font-sans uppercase tracking-wide">
-            Your Purchase Summary
-          </h3>
+          <div className="flex items-center justify-between">
+            <h3 className="text-slate-900 font-bold text-base font-sans uppercase tracking-wide">
+              Purchase Summary
+            </h3>
+            <span className="text-xs font-mono font-bold text-amber-600 bg-amber-100 px-2 py-0.5 rounded">
+              {currency === 'GBP' ? 'GBP (£)' : 'USD ($)'}
+            </span>
+          </div>
 
           <div className="max-h-48 overflow-y-auto divide-y divide-slate-100 pr-1">
             {cartItems.map((item, idx) => (
@@ -280,7 +357,7 @@ export default function Checkout({ cartItems, onBackToCart, onOrderSuccess }: Ch
                   </div>
                 </div>
                 <span className="font-mono font-bold text-slate-900 shrink-0">
-                  ${(item.product.price * item.quantity).toFixed(2)}
+                  {formatPrice(item.product.price * item.quantity, currency)}
                 </span>
               </div>
             ))}
@@ -291,11 +368,11 @@ export default function Checkout({ cartItems, onBackToCart, onOrderSuccess }: Ch
           <div className="space-y-2 text-xs">
             <div className="flex justify-between text-slate-500">
               <span>Checkout Subtotal</span>
-              <span className="font-mono text-slate-700">${subtotal.toFixed(2)}</span>
+              <span className="font-mono text-slate-700">{formatPrice(subtotal, currency)}</span>
             </div>
             <div className="flex justify-between text-slate-500">
-              <span>Estimated Sales Tax (8%)</span>
-              <span className="font-mono text-slate-700">${tax.toFixed(2)}</span>
+              <span>Estimated {currency === 'GBP' ? 'VAT (8%)' : 'Sales Tax (8%)'}</span>
+              <span className="font-mono text-slate-700">{formatPrice(tax, currency)}</span>
             </div>
             <div className="flex justify-between text-slate-500">
               <span>Prime Delivery Fee</span>
@@ -304,7 +381,7 @@ export default function Checkout({ cartItems, onBackToCart, onOrderSuccess }: Ch
             <div className="w-full h-px border-t border-slate-200 my-2"></div>
             <div className="flex justify-between font-bold text-sm text-slate-800">
               <span>Grand Total</span>
-              <span className="font-mono text-slate-950">${total.toFixed(2)}</span>
+              <span className="font-mono text-slate-950 text-base">{formatPrice(total, currency)}</span>
             </div>
           </div>
 
@@ -312,10 +389,10 @@ export default function Checkout({ cartItems, onBackToCart, onOrderSuccess }: Ch
             <button
               type="button"
               onClick={handleOpenBankModal}
-              className="w-full inline-flex items-center justify-center p-3.5 bg-slate-900 hover:bg-amber-500 hover:text-slate-950 text-white font-bold text-xs rounded-xl transition-all duration-200 shadow-md gap-2 cursor-pointer"
+              className="w-full inline-flex items-center justify-center p-3.5 bg-slate-900 hover:bg-amber-500 hover:text-slate-950 text-white font-bold text-xs rounded-xl transition-all duration-200 shadow-md gap-2 cursor-pointer group"
             >
               <CheckCircle2 className="w-4 h-4 text-amber-400 group-hover:text-slate-950" />
-              <span>PAY & COMPLETE SECURE ORDER • ${total.toFixed(2)}</span>
+              <span>PAY & COMPLETE SECURE ORDER • {formatPrice(total, currency)}</span>
             </button>
             
             <div className="mt-4 p-3 bg-emerald-50 rounded-xl border border-emerald-100/60 flex gap-2">
@@ -331,8 +408,8 @@ export default function Checkout({ cartItems, onBackToCart, onOrderSuccess }: Ch
 
       {/* BANK DETAILS & SCREENSHOT UPLOAD MODAL */}
       {showBankModal && (
-        <div className="fixed inset-0 z-50 bg-slate-950/70 backdrop-blur-xs flex items-center justify-center p-4 overflow-y-auto animate-fade-in">
-          <div className="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-slate-100 relative space-y-6 my-8">
+        <div className="fixed inset-0 z-50 bg-slate-950/75 backdrop-blur-xs flex items-center justify-center p-3 sm:p-4 overflow-y-auto animate-fade-in">
+          <div className="bg-white rounded-3xl max-w-lg w-full p-5 sm:p-7 shadow-2xl border border-slate-100 relative space-y-5 my-8">
             
             {/* Header */}
             <div className="flex items-start justify-between border-b border-slate-100 pb-4">
@@ -341,7 +418,9 @@ export default function Checkout({ cartItems, onBackToCart, onOrderSuccess }: Ch
                   Direct Bank Transfer
                 </span>
                 <h3 className="text-xl font-black text-slate-900 tracking-tight">Bank Payment Details</h3>
-                <p className="text-xs text-slate-500 mt-0.5">Transfer exactly <span className="font-bold text-slate-900 font-mono">${total.toFixed(2)}</span> to the account below</p>
+                <p className="text-xs text-slate-500 mt-0.5">
+                  Transfer exactly <span className="font-bold text-slate-900 font-mono text-sm">{totalAmountInRegion}</span> ({currentDisplayCurrency}) to the account below
+                </p>
               </div>
               <button
                 type="button"
@@ -352,6 +431,50 @@ export default function Checkout({ cartItems, onBackToCart, onOrderSuccess }: Ch
               </button>
             </div>
 
+            {/* Region Tabs Switcher: UK vs US */}
+            <div className="flex bg-slate-100 p-1 rounded-xl gap-1">
+              <button
+                type="button"
+                onClick={() => {
+                  setSelectedBankRegion('UK');
+                  if (onCurrencyChange) onCurrencyChange('GBP');
+                }}
+                className={`flex-1 py-2 px-3 rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-1.5 cursor-pointer ${
+                  selectedBankRegion === 'UK'
+                    ? 'bg-white text-slate-900 shadow-sm border border-slate-200/60'
+                    : 'text-slate-500 hover:text-slate-800'
+                }`}
+              >
+                <span>🇬🇧</span>
+                <span>Within the UK (GBP £)</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  setSelectedBankRegion('US');
+                  if (onCurrencyChange) onCurrencyChange('USD');
+                }}
+                className={`flex-1 py-2 px-3 rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-1.5 cursor-pointer ${
+                  selectedBankRegion === 'US'
+                    ? 'bg-white text-slate-900 shadow-sm border border-slate-200/60'
+                    : 'text-slate-500 hover:text-slate-800'
+                }`}
+              >
+                <span>🇺🇸</span>
+                <span>United States (USD $)</span>
+              </button>
+            </div>
+
+            {/* Region header notification */}
+            <div className="p-2.5 rounded-xl bg-slate-900 text-white text-xs flex items-center justify-between">
+              <span className="font-semibold flex items-center gap-1.5">
+                {selectedBankRegion === 'UK' ? '🇬🇧 Receive & Hold British Pound' : '🇺🇸 Receive & Hold US Dollar'}
+              </span>
+              <span className="font-mono font-bold text-amber-400 text-sm">
+                {totalAmountInRegion}
+              </span>
+            </div>
+
             {/* Error Message */}
             {modalError && (
               <div className="bg-rose-50 border-l-4 border-rose-500 p-3.5 rounded-r-xl text-rose-800 text-xs font-medium flex items-center gap-2">
@@ -360,155 +483,289 @@ export default function Checkout({ cartItems, onBackToCart, onOrderSuccess }: Ch
               </div>
             )}
 
-            {/* Bank Details List matching the Screenshot */}
-            <div className="space-y-4 text-slate-800 text-sm">
-              
-              {/* Account Holder Name */}
-              <div className="flex items-center justify-between pb-2 border-b border-slate-100">
-                <div>
-                  <span className="text-xs font-bold text-slate-400 block">Account holder name</span>
-                  <span className="font-extrabold text-slate-900 text-base">faran ahmed</span>
-                </div>
-                <button
-                  type="button"
-                  onClick={() => handleCopyText('faran ahmed', 'accountHolder')}
-                  className="p-2 text-rose-600 hover:bg-rose-50 rounded-lg transition-colors flex items-center gap-1.5 cursor-pointer"
-                  title="Copy account holder name"
-                >
-                  {copiedField === 'accountHolder' ? (
-                    <span className="text-xs font-bold text-emerald-600 flex items-center gap-1">
-                      <Check className="w-4 h-4" /> Copied
+            {/* DYNAMIC BANK DETAILS RENDERING */}
+            {selectedBankRegion === 'UK' ? (
+              /* UK Bank Details (From Provided Screenshot) */
+              <div className="space-y-3.5 text-slate-800 text-sm">
+                {/* Account Holder Name */}
+                <div className="flex items-center justify-between pb-2 border-b border-slate-100">
+                  <div>
+                    <span className="text-xs font-bold text-slate-400 block">Name of the Account</span>
+                    <span className="font-extrabold text-slate-900 text-base">
+                      {BANK_DETAILS.UK.accountHolder}
                     </span>
-                  ) : (
-                    <Copy className="w-4 h-4" />
-                  )}
-                </button>
-              </div>
-
-              {/* Account Number */}
-              <div className="flex items-center justify-between pb-2 border-b border-slate-100">
-                <div>
-                  <span className="text-xs font-bold text-slate-400 block">Account number</span>
-                  <span className="font-mono font-bold text-slate-900 text-base tracking-wide">30000002957351</span>
-                  <span className="text-xs font-bold text-rose-600 block mt-0.5">Min. deposit amount $2.</span>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => handleCopyText(BANK_DETAILS.UK.accountHolder, 'uk_accountHolder')}
+                    className="p-2 text-rose-600 hover:bg-rose-50 rounded-lg transition-colors flex items-center gap-1.5 cursor-pointer"
+                    title="Copy Name"
+                  >
+                    {copiedField === 'uk_accountHolder' ? (
+                      <span className="text-xs font-bold text-emerald-600 flex items-center gap-1">
+                        <Check className="w-4 h-4" /> Copied
+                      </span>
+                    ) : (
+                      <Copy className="w-4 h-4" />
+                    )}
+                  </button>
                 </div>
-                <button
-                  type="button"
-                  onClick={() => handleCopyText('30000002957351', 'accountNumber')}
-                  className="p-2 text-rose-600 hover:bg-rose-50 rounded-lg transition-colors flex items-center gap-1.5 cursor-pointer"
-                  title="Copy account number"
-                >
-                  {copiedField === 'accountNumber' ? (
-                    <span className="text-xs font-bold text-emerald-600 flex items-center gap-1">
-                      <Check className="w-4 h-4" /> Copied
-                    </span>
-                  ) : (
-                    <Copy className="w-4 h-4" />
-                  )}
-                </button>
-              </div>
 
-              {/* Routing Number */}
-              <div className="flex items-center justify-between pb-2 border-b border-slate-100">
-                <div>
-                  <span className="text-xs font-bold text-slate-400 block">Routing number</span>
-                  <span className="font-mono font-bold text-slate-900 text-base tracking-wide">028000024</span>
+                {/* Sort Code */}
+                <div className="flex items-center justify-between pb-2 border-b border-slate-100">
+                  <div>
+                    <span className="text-xs font-bold text-slate-400 block">Sort Code</span>
+                    <span className="font-mono font-bold text-slate-900 text-base tracking-wider">
+                      {BANK_DETAILS.UK.sortCode}
+                    </span>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => handleCopyText(BANK_DETAILS.UK.sortCode, 'uk_sortCode')}
+                    className="p-2 text-rose-600 hover:bg-rose-50 rounded-lg transition-colors flex items-center gap-1.5 cursor-pointer"
+                    title="Copy Sort Code"
+                  >
+                    {copiedField === 'uk_sortCode' ? (
+                      <span className="text-xs font-bold text-emerald-600 flex items-center gap-1">
+                        <Check className="w-4 h-4" /> Copied
+                      </span>
+                    ) : (
+                      <Copy className="w-4 h-4" />
+                    )}
+                  </button>
                 </div>
-                <button
-                  type="button"
-                  onClick={() => handleCopyText('028000024', 'routingNumber')}
-                  className="p-2 text-rose-600 hover:bg-rose-50 rounded-lg transition-colors flex items-center gap-1.5 cursor-pointer"
-                  title="Copy routing number"
-                >
-                  {copiedField === 'routingNumber' ? (
-                    <span className="text-xs font-bold text-emerald-600 flex items-center gap-1">
-                      <Check className="w-4 h-4" /> Copied
-                    </span>
-                  ) : (
-                    <Copy className="w-4 h-4" />
-                  )}
-                </button>
-              </div>
 
-              {/* Bank Name */}
-              <div className="flex items-center justify-between pb-2 border-b border-slate-100">
-                <div>
-                  <span className="text-xs font-bold text-slate-400 block">Bank (Based in US)</span>
-                  <span className="font-bold text-slate-900 text-sm">JP Morgan Chase NA</span>
+                {/* Account Number */}
+                <div className="flex items-center justify-between pb-2 border-b border-slate-100">
+                  <div>
+                    <span className="text-xs font-bold text-slate-400 block">Account Number</span>
+                    <span className="font-mono font-bold text-slate-900 text-base tracking-wider">
+                      {BANK_DETAILS.UK.accountNumber}
+                    </span>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => handleCopyText(BANK_DETAILS.UK.accountNumber, 'uk_accountNumber')}
+                    className="p-2 text-rose-600 hover:bg-rose-50 rounded-lg transition-colors flex items-center gap-1.5 cursor-pointer"
+                    title="Copy Account Number"
+                  >
+                    {copiedField === 'uk_accountNumber' ? (
+                      <span className="text-xs font-bold text-emerald-600 flex items-center gap-1">
+                        <Check className="w-4 h-4" /> Copied
+                      </span>
+                    ) : (
+                      <Copy className="w-4 h-4" />
+                    )}
+                  </button>
                 </div>
-                <button
-                  type="button"
-                  onClick={() => handleCopyText('JP Morgan Chase NA', 'bankName')}
-                  className="p-2 text-rose-600 hover:bg-rose-50 rounded-lg transition-colors flex items-center gap-1.5 cursor-pointer"
-                  title="Copy bank name"
-                >
-                  {copiedField === 'bankName' ? (
-                    <span className="text-xs font-bold text-emerald-600 flex items-center gap-1">
-                      <Check className="w-4 h-4" /> Copied
-                    </span>
-                  ) : (
-                    <Copy className="w-4 h-4" />
-                  )}
-                </button>
-              </div>
 
-              {/* Bank Address */}
-              <div className="flex items-center justify-between pb-2 border-b border-slate-100">
-                <div>
-                  <span className="text-xs font-bold text-slate-400 block">Bank address</span>
-                  <span className="font-semibold text-slate-900 text-xs leading-relaxed block max-w-xs">
-                    270 Park Avenue, New York, NY 10017
-                  </span>
+                {/* Bank Name */}
+                <div className="flex items-center justify-between pb-2 border-b border-slate-100">
+                  <div>
+                    <span className="text-xs font-bold text-slate-400 block">Bank Name</span>
+                    <span className="font-bold text-slate-900 text-sm">
+                      {BANK_DETAILS.UK.bankName}
+                    </span>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => handleCopyText(BANK_DETAILS.UK.bankName, 'uk_bankName')}
+                    className="p-2 text-rose-600 hover:bg-rose-50 rounded-lg transition-colors flex items-center gap-1.5 cursor-pointer"
+                    title="Copy Bank Name"
+                  >
+                    {copiedField === 'uk_bankName' ? (
+                      <span className="text-xs font-bold text-emerald-600 flex items-center gap-1">
+                        <Check className="w-4 h-4" /> Copied
+                      </span>
+                    ) : (
+                      <Copy className="w-4 h-4" />
+                    )}
+                  </button>
                 </div>
-                <button
-                  type="button"
-                  onClick={() => handleCopyText('270 Park Avenue, New York, NY 10017', 'bankAddress')}
-                  className="p-2 text-rose-600 hover:bg-rose-50 rounded-lg transition-colors flex items-center gap-1.5 cursor-pointer"
-                  title="Copy bank address"
-                >
-                  {copiedField === 'bankAddress' ? (
-                    <span className="text-xs font-bold text-emerald-600 flex items-center gap-1">
-                      <Check className="w-4 h-4" /> Copied
-                    </span>
-                  ) : (
-                    <Copy className="w-4 h-4" />
-                  )}
-                </button>
-              </div>
 
-              {/* Account Type */}
-              <div className="flex items-center justify-between pb-2 border-b border-slate-100">
-                <div>
-                  <span className="text-xs font-bold text-slate-400 block">Account type</span>
-                  <span className="font-semibold text-slate-900 text-sm">Checking (Current)</span>
+                {/* Bank Address */}
+                <div className="flex items-center justify-between pb-2 border-b border-slate-100">
+                  <div>
+                    <span className="text-xs font-bold text-slate-400 block">Bank Address</span>
+                    <span className="font-semibold text-slate-900 text-xs leading-relaxed block max-w-xs">
+                      {BANK_DETAILS.UK.bankAddress}
+                    </span>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => handleCopyText(BANK_DETAILS.UK.bankAddress, 'uk_bankAddress')}
+                    className="p-2 text-rose-600 hover:bg-rose-50 rounded-lg transition-colors flex items-center gap-1.5 cursor-pointer"
+                    title="Copy Bank Address"
+                  >
+                    {copiedField === 'uk_bankAddress' ? (
+                      <span className="text-xs font-bold text-emerald-600 flex items-center gap-1">
+                        <Check className="w-4 h-4" /> Copied
+                      </span>
+                    ) : (
+                      <Copy className="w-4 h-4" />
+                    )}
+                  </button>
                 </div>
-                <button
-                  type="button"
-                  onClick={() => handleCopyText('Checking (Current)', 'accountType')}
-                  className="p-2 text-rose-600 hover:bg-rose-50 rounded-lg transition-colors flex items-center gap-1.5 cursor-pointer"
-                  title="Copy account type"
-                >
-                  {copiedField === 'accountType' ? (
-                    <span className="text-xs font-bold text-emerald-600 flex items-center gap-1">
-                      <Check className="w-4 h-4" /> Copied
-                    </span>
-                  ) : (
-                    <Copy className="w-4 h-4" />
-                  )}
-                </button>
               </div>
+            ) : (
+              /* US Bank Details */
+              <div className="space-y-3.5 text-slate-800 text-sm">
+                {/* Account Holder Name */}
+                <div className="flex items-center justify-between pb-2 border-b border-slate-100">
+                  <div>
+                    <span className="text-xs font-bold text-slate-400 block">Account holder name</span>
+                    <span className="font-extrabold text-slate-900 text-base">
+                      {BANK_DETAILS.US.accountHolder}
+                    </span>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => handleCopyText(BANK_DETAILS.US.accountHolder, 'us_accountHolder')}
+                    className="p-2 text-rose-600 hover:bg-rose-50 rounded-lg transition-colors flex items-center gap-1.5 cursor-pointer"
+                    title="Copy account holder name"
+                  >
+                    {copiedField === 'us_accountHolder' ? (
+                      <span className="text-xs font-bold text-emerald-600 flex items-center gap-1">
+                        <Check className="w-4 h-4" /> Copied
+                      </span>
+                    ) : (
+                      <Copy className="w-4 h-4" />
+                    )}
+                  </button>
+                </div>
 
-            </div>
+                {/* Account Number */}
+                <div className="flex items-center justify-between pb-2 border-b border-slate-100">
+                  <div>
+                    <span className="text-xs font-bold text-slate-400 block">Account number</span>
+                    <span className="font-mono font-bold text-slate-900 text-base tracking-wide">
+                      {BANK_DETAILS.US.accountNumber}
+                    </span>
+                    <span className="text-xs font-bold text-rose-600 block mt-0.5">Min. deposit amount $2.</span>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => handleCopyText(BANK_DETAILS.US.accountNumber, 'us_accountNumber')}
+                    className="p-2 text-rose-600 hover:bg-rose-50 rounded-lg transition-colors flex items-center gap-1.5 cursor-pointer"
+                    title="Copy account number"
+                  >
+                    {copiedField === 'us_accountNumber' ? (
+                      <span className="text-xs font-bold text-emerald-600 flex items-center gap-1">
+                        <Check className="w-4 h-4" /> Copied
+                      </span>
+                    ) : (
+                      <Copy className="w-4 h-4" />
+                    )}
+                  </button>
+                </div>
+
+                {/* Routing Number */}
+                <div className="flex items-center justify-between pb-2 border-b border-slate-100">
+                  <div>
+                    <span className="text-xs font-bold text-slate-400 block">Routing number</span>
+                    <span className="font-mono font-bold text-slate-900 text-base tracking-wide">
+                      {BANK_DETAILS.US.routingNumber}
+                    </span>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => handleCopyText(BANK_DETAILS.US.routingNumber || '', 'us_routingNumber')}
+                    className="p-2 text-rose-600 hover:bg-rose-50 rounded-lg transition-colors flex items-center gap-1.5 cursor-pointer"
+                    title="Copy routing number"
+                  >
+                    {copiedField === 'us_routingNumber' ? (
+                      <span className="text-xs font-bold text-emerald-600 flex items-center gap-1">
+                        <Check className="w-4 h-4" /> Copied
+                      </span>
+                    ) : (
+                      <Copy className="w-4 h-4" />
+                    )}
+                  </button>
+                </div>
+
+                {/* Bank Name */}
+                <div className="flex items-center justify-between pb-2 border-b border-slate-100">
+                  <div>
+                    <span className="text-xs font-bold text-slate-400 block">Bank (Based in US)</span>
+                    <span className="font-bold text-slate-900 text-sm">
+                      {BANK_DETAILS.US.bankName}
+                    </span>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => handleCopyText(BANK_DETAILS.US.bankName, 'us_bankName')}
+                    className="p-2 text-rose-600 hover:bg-rose-50 rounded-lg transition-colors flex items-center gap-1.5 cursor-pointer"
+                    title="Copy bank name"
+                  >
+                    {copiedField === 'us_bankName' ? (
+                      <span className="text-xs font-bold text-emerald-600 flex items-center gap-1">
+                        <Check className="w-4 h-4" /> Copied
+                      </span>
+                    ) : (
+                      <Copy className="w-4 h-4" />
+                    )}
+                  </button>
+                </div>
+
+                {/* Bank Address */}
+                <div className="flex items-center justify-between pb-2 border-b border-slate-100">
+                  <div>
+                    <span className="text-xs font-bold text-slate-400 block">Bank address</span>
+                    <span className="font-semibold text-slate-900 text-xs leading-relaxed block max-w-xs">
+                      {BANK_DETAILS.US.bankAddress}
+                    </span>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => handleCopyText(BANK_DETAILS.US.bankAddress, 'us_bankAddress')}
+                    className="p-2 text-rose-600 hover:bg-rose-50 rounded-lg transition-colors flex items-center gap-1.5 cursor-pointer"
+                    title="Copy bank address"
+                  >
+                    {copiedField === 'us_bankAddress' ? (
+                      <span className="text-xs font-bold text-emerald-600 flex items-center gap-1">
+                        <Check className="w-4 h-4" /> Copied
+                      </span>
+                    ) : (
+                      <Copy className="w-4 h-4" />
+                    )}
+                  </button>
+                </div>
+
+                {/* Account Type */}
+                <div className="flex items-center justify-between pb-2 border-b border-slate-100">
+                  <div>
+                    <span className="text-xs font-bold text-slate-400 block">Account type</span>
+                    <span className="font-semibold text-slate-900 text-sm">
+                      {BANK_DETAILS.US.accountType}
+                    </span>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => handleCopyText(BANK_DETAILS.US.accountType || '', 'us_accountType')}
+                    className="p-2 text-rose-600 hover:bg-rose-50 rounded-lg transition-colors flex items-center gap-1.5 cursor-pointer"
+                    title="Copy account type"
+                  >
+                    {copiedField === 'us_accountType' ? (
+                      <span className="text-xs font-bold text-emerald-600 flex items-center gap-1">
+                        <Check className="w-4 h-4" /> Copied
+                      </span>
+                    ) : (
+                      <Copy className="w-4 h-4" />
+                    )}
+                  </button>
+                </div>
+              </div>
+            )}
 
             {/* SCREENSHOT UPLOAD SECTION */}
-            <div className="bg-slate-50 border border-slate-200/80 p-5 rounded-2xl space-y-3">
+            <div className="bg-slate-50 border border-slate-200/80 p-4 sm:p-5 rounded-2xl space-y-3">
               <label className="text-xs font-bold text-slate-800 uppercase tracking-wider flex items-center justify-between">
                 <span>Upload Payment Screenshot (SS)</span>
                 <span className="text-rose-600 text-[10px] font-black">* Required</span>
               </label>
 
               {!screenshot ? (
-                <label className="border-2 border-dashed border-slate-300 hover:border-amber-500 bg-white p-6 rounded-xl flex flex-col items-center justify-center cursor-pointer transition-colors group text-center space-y-2">
+                <label className="border-2 border-dashed border-slate-300 hover:border-amber-500 bg-white p-5 rounded-xl flex flex-col items-center justify-center cursor-pointer transition-colors group text-center space-y-2">
                   <div className="w-10 h-10 rounded-full bg-amber-50 text-amber-600 flex items-center justify-center group-hover:scale-110 transition-transform">
                     <Upload className="w-5 h-5" />
                   </div>
@@ -555,9 +812,9 @@ export default function Checkout({ cartItems, onBackToCart, onOrderSuccess }: Ch
                 type="button"
                 onClick={handleCompleteOrder}
                 disabled={isSubmitting}
-                className={`w-full py-4 px-6 ${
+                className={`w-full py-3.5 px-6 ${
                   isSubmitting ? 'bg-slate-700 cursor-not-allowed' : 'bg-slate-900 hover:bg-amber-500 hover:text-slate-950 cursor-pointer'
-                } text-white font-black text-sm rounded-2xl transition-all shadow-lg flex items-center justify-center gap-2`}
+                } text-white font-black text-xs sm:text-sm rounded-2xl transition-all shadow-lg flex items-center justify-center gap-2`}
               >
                 {isSubmitting ? (
                   <>
@@ -567,7 +824,7 @@ export default function Checkout({ cartItems, onBackToCart, onOrderSuccess }: Ch
                 ) : (
                   <>
                     <CheckCircle2 className="w-5 h-5 text-amber-400" />
-                    <span>Submit Screenshot & Complete Order</span>
+                    <span>Submit Screenshot & Complete Order ({totalAmountInRegion})</span>
                   </>
                 )}
               </button>
