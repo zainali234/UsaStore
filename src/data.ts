@@ -665,5 +665,109 @@ export const PRODUCTS: Product[] = [
     ],
     stock: 15,
     badge: 'Pet Care'
+  },
+  {
+    id: 'meta-quest-2',
+    name: 'Meta Quest 2 — Advanced All-In-One Virtual Reality Headset — 128 GB',
+    price: 199.99,
+    originalPrice: 399.99,
+    rating: 4.9,
+    reviewsCount: 200,
+    category: 'electronics',
+    image: '/images/Meta-Quest.jpg',
+    description: 'Advanced all-in-one virtual reality headset with immersive experience and intuitive controls.',
+    longDescription: 'Step into the future of virtual reality with the Meta Quest 2. This advanced all-in-one headset delivers an immersive experience with stunning visuals, intuitive controls, and a wide range of compatible apps and games.',
+    features: [
+      'Experience total immersion with 3D positional audio, hand tracking and easy-to-use controllers working together to make virtual worlds feel real.',
+      'Come together in incredible social spaces and multiplayer arenas as you take in live events with friends and family, find your new workout crew or join adventures with fellow players.',
+      '2 Touch Controllers (L&R), Glass Spacer, 2 AA Batteries, Quick Start Guide, Power Adapter (US, UK, EU, AU), Safety & Warranty Guide, Charging cable, VR headset2 Touch Controllers (L&R), Glass Spacer, 2 AA Batteries, Quick Start Guide, Power Adapter (US, UK, EU, AU), Safety & Warranty Guide, Charging cable, VR headset',
+      '128 GB storage for apps, games, and media',
+      'Built-in audio system for spatial sound'
+    ],
+    stock: 10,
+    badge: 'Tech Trend'
+  },
+  {
+    id: 'wireless-gaming',
+    name: 'Xbox Wireless Gaming Controller | Elite Series 2 | Black | Consoles, PCs, TVs, mobile, and more | Adjustable Thumbsticks | Trigger Locks',
+    price: 99.99,
+    originalPrice: 249.99,
+    rating: 4.9,
+    reviewsCount: 150,
+    category: 'electronics',
+    image: '/images/wireless-gaming.jpg',
+    description: 'Premium wireless gaming controller with adjustable thumbsticks and trigger locks for enhanced gameplay.',
+    longDescription: 'Elevate your gaming experience with the Xbox Wireless Gaming Controller Elite Series 2. Designed for precision and comfort, this controller features adjustable thumbsticks, trigger locks, and a customizable button layout to suit your playstyle.',
+    features: [
+      'INTERCHANGEABLE COMPONENTS — Swap thumbstick toppers, D-pads, and paddles to tailor your controller to your preferred gaming style. Includes 6 thumbsticks, 4 paddles, 2 D-pads, carrying case, and charging dock.',
+      'BUILT FOR LONG SESSIONS — Stay in the game with up to 40 hours of rechargeable battery life, wrap-around rubberized grips, and refined components built for durability and comfort.',
+      'PLAY ACROSS EVERY SCREEN — Use XBOX Wireless, Bluetooth, or the included USB-C cable to play across XBOX Series X|S, XBOX One, Windows PC, and cloud. Plug in any compatible headset with the 3.5mm audio jack.',
+      'ADJUSTABLE-TENSION THUMBSTICKS — Fine-tune your aim with thumbsticks that let you adjust resistance for improved accuracy, consistency, and control in every match.',
+      
+    ],
+    stock: 20,
+    badge: 'Gaming Pro' 
+  },
+  {
+  id: '26-Inch Aluminum Frame Hardside Checked Luggage, Metallic Silver',
+  name: '26-Inch Aluminum Frame Hardside Checked Luggage, Metallic Silver',
+  price: 99.99,
+  originalPrice: 299.99,
+  rating: 4.8,
+  reviewsCount: 150,
+  category: 'travel',
+  image: '/images/hand-carry.jpg',
+  description: 'Durable hardside checked luggage with aluminum frame, TSA-approved lock, and smooth-rolling spinner wheels.',
+  longDescription: 'Travel in style and security with our 26-inch Aluminum Frame Hardside Checked Luggage. Built with a robust aluminum frame and high-quality polycarbonate shell, this luggage is designed to withstand the rigors of travel while keeping your belongings safe. It features a TSA-approved lock for added security and smooth-rolling spinner wheels for effortless maneuverability.',
+  features: [
+    'Medium Checked Luggage (26.6x18.1x10.6" | 85L | 9.1 lbs | 12-15 Days): Perfect for weekslong vacations, cross-country trips, or small family travel, this 26-inch hardshell suitcase features a generous 85L capacity. Despite its ample size, it weighs only 9.1 lbs, allowing you to pack more without hitting airline weight limits. Built for longer journeys of 10-15 days, it provides superior protection for all your essentials while remaining remarkably easy to maneuver.',
+    'ZIPPERLESS ALUMINUM FRAME & LIGHTWEIGHT PC SHELL: Ditch compromised zippers! This hardshell suitcase combines a pry-proof, aerospace-grade aluminum frame for ultimate anti-theft security, with a world-renowned Covestro PC body. With 4 reinforced corners, it absorbs extreme impacts while remaining ultra-lightweight. You get metal-like protection without the heavy burden of a full-aluminum suitcase.',
+    '5-Year Quality Promise & 24/7 Support: Every suitcase is backed by a reliable 5-Year Quality Promise. If you have any questions, please contact us anytime. Our dedicated support team will respond within 12 hours to provide a prompt and satisfactory solution. Purchase with confidence—we have got your back!',
+   
+  ],
+  stock: 30,
+  badge: 'Travel Essential' 
+  },
+  {
+    id: 'Licensed Dodge Ride on Push Car for Toddlers 1-3 Years with Handle & Music',
+    name: 'Licensed Dodge Ride on Push Car for Toddlers 1-3 Years with Handle & Music',
+    price: 110.99,
+    originalPrice: 249.99,
+    rating: 4.9,
+    reviewsCount: 200,
+    category: 'toys',
+    image: '/images/push-car.jpg',
+    description: 'Licensed Dodge ride-on push car for toddlers aged 1-3 years, featuring a handle and music for interactive play.',
+    longDescription: 'Give your little one the thrill of driving with the Licensed Dodge Ride-On Push Car. Designed for toddlers aged 1-3 years, this ride-on car features a sturdy handle for parents to assist with steering, as well as built-in music to enhance the fun. Its realistic design and safe construction make it perfect for indoor and outdoor play.',
+    features: [
+      '【Dodge License】This officially licensed Dodge push car recreates the bold design of the Dodge Charger SRT Hellcat. One of the best toy cars for toddlers, it built with quality materials for a fun driving experience and makes a perfect gift for birthdays or Christmas.',
+      '【Adjustable Push Handle】Designed for parent pushing on this toddler push car with handle, featuring a button-controlled push bar with 3 height settings (22.2, 29.7, 36.2) to fit different statures, and folds down easily for storage.',
+      '【Smooth & Stable】Oversized 6.7″ wheels on this push car for toddlers 1-3 grip both indoor floors and outdoor pavement, while the wide wheelbase resists tipping for a smooth and stable ride across different terrains.',
+      '【Easy Assembly】 Assembling this kids push car is straightforward with the step-by-step manual and online video guide, taking about 20 minutes. Backed by 24h customer support.',
+      'Easy to assemble and maintain'
+    ],
+    stock: 25,
+    badge: 'Toddler Fun'  
+  },
+  {
+    id: 'Colorful Lighting Baby Balance Bike Toys for 1 Year Old Boy Girl Gifts, 10-36 Month Toddler Balance Bike, No Pedal 4 Silence Wheels & Soft Seat First Riding on Toys, 1st Birthday Gifts',
+    name: 'Colorful Lighting Baby Balance Bike Toys for 1 Year Old Boy Girl Gifts, 10-36 Month Toddler Balance Bike, No Pedal 4 Silence Wheels & Soft Seat First Riding on Toys, 1st Birthday Gifts',
+    price: 88.99,
+    originalPrice: 120.99,
+    rating: 4.8,
+    reviewsCount: 150,
+    category: 'toys',
+    image: '/images/bike-toy.jpg',
+    description: 'Colorful lighting baby balance bike for 1 year old boy girl gifts, 10-36 month toddler balance bike, no pedal 4 silence wheels & soft seat first riding on toys, 1st birthday gifts',
+    longDescription: 'Make your little one the center of attention with this colorful lighting baby balance bike. Perfect for toddlers aged 10-36 months, this balance bike features a no-pedal design with silent wheels and a soft seat for a comfortable ride. Ideal for birthdays or Christmas gifts.',
+    features: [
+      '【Colorful Lighting】This baby balance bike features vibrant colors and built-in LED lights that add excitement to every ride.',
+      '【No Pedal Design】The no-pedal design allows toddlers to focus on balancing and steering without the complexity of pedals.',
+      '【Silent Wheels】Equipped with silent wheels that provide a smooth and quiet ride, perfect for indoor use.',
+      '【Soft Seat】The ergonomic soft seat ensures comfort during rides, encouraging longer play sessions.',
+      '【Perfect Gift】A great gift for birthdays or Christmas, this balance bike is sure to delight any young rider.'
+    ],
+    stock: 30,
+    badge: 'Toddler Fun'
   }
 ];
