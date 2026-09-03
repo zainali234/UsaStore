@@ -769,5 +769,47 @@ export const PRODUCTS: Product[] = [
     ],
     stock: 30,
     badge: 'Toddler Fun'
+  },
+  {
+    id: 'Rattan Small Bathroom Cabinet Narrow Toilet Paper Organizer Walnut',
+    name: '7.9 D x 7.9 W Bathroom Organizer and Storage Cabinet for Small Space, Slim Corner Unit with Adjustable Shelf',
+    price: 69.99,
+    originalPrice: 99.99,
+    rating: 4.5,
+    reviewsCount: 80,
+    category: 'bathroom',
+    image: '/images/mini-bathroom.jpg',
+    description: 'Rattan small bathroom cabinet narrow toilet paper organizer walnut, 7.9 D x 7.9 W bathroom organizer and storage cabinet for small space, slim corner unit with adjustable shelf',
+    longDescription: 'This rattan small bathroom cabinet is a perfect solution for small spaces. With its narrow design and adjustable shelf, it provides convenient storage for your bathroom essentials.',
+    features: [
+      'Slim & Space‑Saving Design: Measuring 7.9 D × 7.9 W × 27.6 H, this compact cabinet delivers generous storage despite its small footprint. Its narrow profile fits seamlessly into tight spots, corners or beside toilets, making it ideal for small bathrooms. Transform unused gaps into practical storage to organize your daily essentials and keep your space clutter‑free',
+      'Stylish and Functional Design: The beautiful rattan - woven panels not only add a touch of natural charm but also serve as a unique decorative element. This small bathroom storage cabinet features an enclosed top, providing a safe spot to place your phone or bathroom essentials',
+      '【Adjustable Shelf】The adjustable shelf allows you to customize the storage space based on your needs.',
+      '【Slim Corner Unit】Designed to fit seamlessly into corner spaces, maximizing your available area.',
+      '【Perfect for Small Spaces】Ideal for small bathrooms or any space where storage is limited.'
+    ],
+    stock: 25,
+    badge: 'Space Saver'
+  },
+  {
+    id: 'Girls Roller Skates for Kids Ages 3-5 5-8 6-12 Adjustable Light Up Roller Skates for Toddlers Beginners Boys Unicorn Mermaid Rainbow Gift for Indoor Outdoor Sports',
+    name: 'Girls Roller Skates for Kids Ages 3-5 5-8 6-12 Adjustable Light Up Roller Skates for Toddlers Beginners Boys Unicorn Mermaid Rainbow Gift for Indoor Outdoor Sports',
+    price: 59.99,
+    originalPrice: 110.99,
+    rating: 4.7,
+    reviewsCount: 120,
+    category: 'toys',
+    image: '/images/roller-shoes.jpg',
+    description: 'Adjustable light-up roller skates for kids ages 3-12, perfect for indoor and outdoor sports.',
+    longDescription: '【Exquisite Packaging and Professional Accessories】: Each pair of toddler roller skates comes with an exquisite packaging box, perfectly presented, making it the perfect gift for children on birthdays, Christmas, holidays, and special occasions. Included is a pair of breathable and comfortable professional kids roller skating socks to enhance the skating experience, ensuring the child stays comfortable during long skating sessions.',
+    features: [
+      '【Colorful Wheels & Dreamy Mermaid Unicorn Design】: These girls skates makes it easy to grasp the balance and greatly increases safety and stabilit feature glowing wheels that flash with vibrant colors while skating, increasing visibility at night and adding extra fun for kids. The roller skate shoe upper is decorated with 3D silicone mermaid and unicorn patterns, combined with rainbow colors, creating a stylish yet playful look that makes children stand out in the crowd.',
+      '【Improve Safety】: The kids skates are equipped with adjustable safety buckles, secure Velcro straps, and durable laces to provide better stability and safety while skating. The front brake design helps children maintain balance with ease, enhancing safety during skating. The 82A PU glowing wheels offer good visibility at night, helping to improve skating safety. Equipped with ABEC-7 precision bearings, the skates provide optimized performance and durability, ensuring a smoother ride every time.',
+      'Durable construction for indoor and outdoor use',
+      'Comfortable padding for extended wear',
+      'Easy to put on and take off with secure straps'
+    ],
+    stock: 20,
+    badge: 'Fun & Active'
   }
 ];
