@@ -585,65 +585,65 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'mobile-holder',
-    name : 'Osmo Mobile 8 Gimbal Stabilizer for Phone, 3-Axis Stabilization',
-    price : 110.99,
-    originalPrice : 199.99,
-    rating : 4.8,
-    reviewsCount : 210,
-    category : 'electronics',
-    image : '/images/mobile-holder.jpg',
-    description : 'Professional 3-axis gimbal stabilizer for smartphones with active tracking and gesture control.',
-    longDescription : 'Capture smooth, cinematic footage with the Osmo Mobile 8 Gimbal Stabilizer. This advanced device features a 3-axis stabilization system that eliminates shake and jitter, allowing you to record professional-quality videos with your smartphone. It also includes active tracking, gesture control, and a variety of shooting modes to enhance your filming experience.',
-    features : [
+    name: 'Osmo Mobile 8 Gimbal Stabilizer for Phone, 3-Axis Stabilization',
+    price: 110.99,
+    originalPrice: 199.99,
+    rating: 4.8,
+    reviewsCount: 210,
+    category: 'electronics',
+    image: '/images/mobile-holder.jpg',
+    description: 'Professional 3-axis gimbal stabilizer for smartphones with active tracking and gesture control.',
+    longDescription: 'Capture smooth, cinematic footage with the Osmo Mobile 8 Gimbal Stabilizer. This advanced device features a 3-axis stabilization system that eliminates shake and jitter, allowing you to record professional-quality videos with your smartphone. It also includes active tracking, gesture control, and a variety of shooting modes to enhance your filming experience.',
+    features: [
       '3-axis stabilization for smooth video capture',
       'Active tracking technology for following subjects automatically',
       'Gesture control for hands-free operation',
       'Multiple shooting modes including panorama and time-lapse',
       'Lightweight and portable design for easy transport'
     ],
-    stock : 25,
+    stock: 25,
   },
   {
     id: 'zero-sugar',
-    name : 'Zero Sugar Electrolytes | 30-Count ',
-    price : 80.99,
-    originalPrice : 100.99,
-    rating : 4.9,
-    reviewsCount : 150,
-    category : 'beverages',
-    image : '/images/Zero-Sugar-Electrolytes.jpg',
-    description : 'LMNT Zero Sugar Electrolytes - Raw Unflavored Salt | Drink Mix | 30-Count.',
-    longDescription : 'Stay energized without the sugar crash with our Zero Sugar Energy Drink. Packed with natural flavors and electrolytes, this beverage provides a boost of energy while keeping you hydrated. Perfect for workouts, long drives, or any time you need a pick-me-up.',
-    features : [
+    name: 'Zero Sugar Electrolytes | 30-Count ',
+    price: 80.99,
+    originalPrice: 100.99,
+    rating: 4.9,
+    reviewsCount: 150,
+    category: 'beverages',
+    image: '/images/Zero-Sugar-Electrolytes.jpg',
+    description: 'LMNT Zero Sugar Electrolytes - Raw Unflavored Salt | Drink Mix | 30-Count.',
+    longDescription: 'Stay energized without the sugar crash with our Zero Sugar Energy Drink. Packed with natural flavors and electrolytes, this beverage provides a boost of energy while keeping you hydrated. Perfect for workouts, long drives, or any time you need a pick-me-up.',
+    features: [
       'Zero sugar formula for guilt-free energy',
       'Infused with electrolytes for hydration',
       'Natural flavors for a refreshing taste',
       'Convenient 12-pack for on-the-go energy',
       'No artificial colors or preservatives'
     ],
-    stock : 50,
-    badge : 'Healthy Choice'
+    stock: 50,
+    badge: 'Healthy Choice'
   },
   {
     id: 'computer-desk',
-    name : ' Height Adjustable Computer Desk',
-    price : 120.99,
-    originalPrice : 200,
-    rating : 4.8,
-    reviewsCount : 120,
-    category : 'home',
-    image : '/images/height-adjustable-computer-desk.jpg',
-    description : 'Ergonomic height adjustable computer desk with spacious work surface and cable management system.',
-    longDescription : 'Enhance your productivity and comfort with our Height Adjustable Computer Desk. Designed for both sitting and standing positions, this desk features a spacious work surface, sturdy frame, and an integrated cable management system to keep your workspace organized.',
-    features : [
+    name: ' Height Adjustable Computer Desk',
+    price: 120.99,
+    originalPrice: 200,
+    rating: 4.8,
+    reviewsCount: 120,
+    category: 'home',
+    image: '/images/height-adjustale-computer-desk.jpg',
+    description: 'Ergonomic height adjustable computer desk with spacious work surface and cable management system.',
+    longDescription: 'Enhance your productivity and comfort with our Height Adjustable Computer Desk. Designed for both sitting and standing positions, this desk features a spacious work surface, sturdy frame, and an integrated cable management system to keep your workspace organized.',
+    features: [
       'Height adjustable for sitting or standing use',
       'Spacious work surface for monitors, laptops, and accessories',
       'Sturdy steel frame for stability and durability',
       'Integrated cable management system to reduce clutter',
       'Easy assembly with included instructions and tools'
     ],
-    stock : 20,
-    badge : 'Office Essential'
+    stock: 20,
+    badge: 'Office Essential'
   },
   {
     id: 'dog grooming',
@@ -703,30 +703,30 @@ export const PRODUCTS: Product[] = [
       'BUILT FOR LONG SESSIONS — Stay in the game with up to 40 hours of rechargeable battery life, wrap-around rubberized grips, and refined components built for durability and comfort.',
       'PLAY ACROSS EVERY SCREEN — Use XBOX Wireless, Bluetooth, or the included USB-C cable to play across XBOX Series X|S, XBOX One, Windows PC, and cloud. Plug in any compatible headset with the 3.5mm audio jack.',
       'ADJUSTABLE-TENSION THUMBSTICKS — Fine-tune your aim with thumbsticks that let you adjust resistance for improved accuracy, consistency, and control in every match.',
-      
+
     ],
     stock: 20,
-    badge: 'Gaming Pro' 
+    badge: 'Gaming Pro'
   },
   {
-  id: '26-Inch Aluminum Frame Hardside Checked Luggage, Metallic Silver',
-  name: '26-Inch Aluminum Frame Hardside Checked Luggage, Metallic Silver',
-  price: 99.99,
-  originalPrice: 299.99,
-  rating: 4.8,
-  reviewsCount: 150,
-  category: 'travel',
-  image: '/images/hand-carry.jpg',
-  description: 'Durable hardside checked luggage with aluminum frame, TSA-approved lock, and smooth-rolling spinner wheels.',
-  longDescription: 'Travel in style and security with our 26-inch Aluminum Frame Hardside Checked Luggage. Built with a robust aluminum frame and high-quality polycarbonate shell, this luggage is designed to withstand the rigors of travel while keeping your belongings safe. It features a TSA-approved lock for added security and smooth-rolling spinner wheels for effortless maneuverability.',
-  features: [
-    'Medium Checked Luggage (26.6x18.1x10.6" | 85L | 9.1 lbs | 12-15 Days): Perfect for weekslong vacations, cross-country trips, or small family travel, this 26-inch hardshell suitcase features a generous 85L capacity. Despite its ample size, it weighs only 9.1 lbs, allowing you to pack more without hitting airline weight limits. Built for longer journeys of 10-15 days, it provides superior protection for all your essentials while remaining remarkably easy to maneuver.',
-    'ZIPPERLESS ALUMINUM FRAME & LIGHTWEIGHT PC SHELL: Ditch compromised zippers! This hardshell suitcase combines a pry-proof, aerospace-grade aluminum frame for ultimate anti-theft security, with a world-renowned Covestro PC body. With 4 reinforced corners, it absorbs extreme impacts while remaining ultra-lightweight. You get metal-like protection without the heavy burden of a full-aluminum suitcase.',
-    '5-Year Quality Promise & 24/7 Support: Every suitcase is backed by a reliable 5-Year Quality Promise. If you have any questions, please contact us anytime. Our dedicated support team will respond within 12 hours to provide a prompt and satisfactory solution. Purchase with confidence—we have got your back!',
-   
-  ],
-  stock: 30,
-  badge: 'Travel Essential' 
+    id: '26-Inch Aluminum Frame Hardside Checked Luggage, Metallic Silver',
+    name: '26-Inch Aluminum Frame Hardside Checked Luggage, Metallic Silver',
+    price: 99.99,
+    originalPrice: 299.99,
+    rating: 4.8,
+    reviewsCount: 150,
+    category: 'travel',
+    image: '/images/hand-carry.jpg',
+    description: 'Durable hardside checked luggage with aluminum frame, TSA-approved lock, and smooth-rolling spinner wheels.',
+    longDescription: 'Travel in style and security with our 26-inch Aluminum Frame Hardside Checked Luggage. Built with a robust aluminum frame and high-quality polycarbonate shell, this luggage is designed to withstand the rigors of travel while keeping your belongings safe. It features a TSA-approved lock for added security and smooth-rolling spinner wheels for effortless maneuverability.',
+    features: [
+      'Medium Checked Luggage (26.6x18.1x10.6" | 85L | 9.1 lbs | 12-15 Days): Perfect for weekslong vacations, cross-country trips, or small family travel, this 26-inch hardshell suitcase features a generous 85L capacity. Despite its ample size, it weighs only 9.1 lbs, allowing you to pack more without hitting airline weight limits. Built for longer journeys of 10-15 days, it provides superior protection for all your essentials while remaining remarkably easy to maneuver.',
+      'ZIPPERLESS ALUMINUM FRAME & LIGHTWEIGHT PC SHELL: Ditch compromised zippers! This hardshell suitcase combines a pry-proof, aerospace-grade aluminum frame for ultimate anti-theft security, with a world-renowned Covestro PC body. With 4 reinforced corners, it absorbs extreme impacts while remaining ultra-lightweight. You get metal-like protection without the heavy burden of a full-aluminum suitcase.',
+      '5-Year Quality Promise & 24/7 Support: Every suitcase is backed by a reliable 5-Year Quality Promise. If you have any questions, please contact us anytime. Our dedicated support team will respond within 12 hours to provide a prompt and satisfactory solution. Purchase with confidence—we have got your back!',
+
+    ],
+    stock: 30,
+    badge: 'Travel Essential'
   },
   {
     id: 'Licensed Dodge Ride on Push Car for Toddlers 1-3 Years with Handle & Music',
@@ -747,7 +747,7 @@ export const PRODUCTS: Product[] = [
       'Easy to assemble and maintain'
     ],
     stock: 25,
-    badge: 'Toddler Fun'  
+    badge: 'Toddler Fun'
   },
   {
     id: 'Colorful Lighting Baby Balance Bike Toys for 1 Year Old Boy Girl Gifts, 10-36 Month Toddler Balance Bike, No Pedal 4 Silence Wheels & Soft Seat First Riding on Toys, 1st Birthday Gifts',
@@ -811,5 +811,127 @@ export const PRODUCTS: Product[] = [
     ],
     stock: 20,
     badge: 'Fun & Active'
+  },
+  {
+    id: 'Bont Skates - Multi Sport Skate Backpack Travel Bag - Inline Ice Quad Speed Skating',
+    name: 'Bont Skates - Multi Sport Skate Backpack Travel Bag - Inline Ice Quad Speed Skating',
+    price: 55.99,
+    originalPrice: 99.99,
+    rating: 4.8,
+    reviewsCount: 95,
+    category: 'sports',
+    image: '/images/travel-bag.jpg',
+    description: 'Multi-sport skate backpack travel bag suitable for inline, ice, quad, and speed skating.',
+    longDescription: 'The Bont Skates Multi Sport Skate Backpack is designed for skaters of all disciplines. With ample storage space and ergonomic design, it allows you to carry your skates and gear comfortably and securely.',
+    features: [
+      'Bont Skate Backpack is the perfect bag for carrying your skate equipment',
+      'Large 28L capacity with laptop and mesh pouches inside, splash-proof water-resistant material',
+      'Dimensions: 48 x 35 x 18cm [28L] Weight: 990g',
+      'Roller skate bag, Inline skate bag, ice skate bag, skate bag, roller skate bag for women, hockey skate bag, figure skate bag',
+      'Stylish design suitable for all types of skaters'
+    ],
+    stock: 18,
+    badge: 'Skater\'s Choice'
+  },
+  {
+    id: 'Govee Floor Lamp 3 with Luminblend+ Technology, 1000K-10000K Standing Lamp | Work with Matter, 2100lm Modern Floor Lamps for Living Room, Bedroom, Office',
+    name: 'Govee Floor Lamp 3 with Luminblend+ Technology, 1000K-10000K Standing Lamp',
+    price: 89.99,
+    originalPrice: 149.99,
+    rating: 4.7,
+    reviewsCount: 110,
+    category: 'home',
+    image: '/images/lamp.PNG',
+    description: 'Modern floor lamp with Luminblend+ technology, adjustable color temperature, and smart home compatibility.',
+    longDescription: 'Govee Floor Lamp 3 with Luminblend+ Technology, 1000K-10000K Standing LampWork with Matter, 2100lm Modern Floor Lamps for Living Room, Bedroom, Office, Corner Lamp with Dynamic Scenes, DaySync',
+    features: [
+      'True-to-Life Color & Texture: This LED floor lamp features Govee LuminBlend+ technology, a 16-bit IC chip, and advanced algorithms to deliver realistic tones and delicate pastel shades, creating an atmospheric, imaginative space that matching your mood.',
+      'Temperature and Brightness: This standing floor lamp delivers tunable 1000K-10000K, 2100lm@6500K, and 30% wider wall-washing vs Govee Floor Lamp 2. Glare-free, ideal floor lamp for reading and working. *Note: 2100lm only at 6500K; perceived brightness varies with color temp & room size.',
+      'Double-Sided Skyline & Spot-Free Glow: This dimmable floor lamp for living room adds depth with an elegant backlight contour. 288 dense LEDs and optimized diffusion deliver soft, spot-free ambient lighting. A stunning decorative piece in any situation.',
+      '2100 lumens brightness for well-lit spaces',
+      'Sleek modern design suitable for any room decor'
+    ],
+    stock: 15,
+    badge: 'Smart Lighting'
+  },
+  {
+    id: 'Solar Fence Lights Outdoor, 2700/4000/6000K 3 Mode, 8-12H, Black, 8 PackIP65 Waterproof, Fence Lights Solar Powered for Outside, Backyard, Railing, Step, Patio,Wall and Home Improvement',
+    name: 'Solar Fence Lights Outdoor, 2700/4000/6000K 3 Mode, 8-12H, Black, 8 PackIP65 Waterproof, Fence Lights Solar Powered for Outside, Backyard, Railing, Step, Patio,Wall and Home Improvement',
+    price: 55.99,
+    originalPrice: 99.99,
+    rating: 4.5,
+    reviewsCount: 85,
+    category: 'home',
+    image: '/images/solar.PNG',
+    description: 'Outdoor solar fence lights with adjustable color temperature and IP65 waterproofing.',
+    longDescription: 'These solar fence lights are perfect for illuminating your outdoor space. With three color temperature options and IP65 waterproofing, they provide reliable lighting for your backyard, patio, or driveway.',
+    features: [
+      '3 Lighting Modes Fence Solar Lights: Our solar lights for fence offer 3 lighting modes: warm white/ Neutral White/ Cool White mode. suitable for daily lighting, illuminating your fence or courtyard. If youre looking for an environmentally friendly and economical way to light up your yard, this solar-powered option is sure to impress you',
+      '2 Types of Installation: Fence post solar lights are relatively easy to install since they dont require any electrical wiring. outdoor fence lights can be mounted with screws (included) on outdoor walls, fences, next to the porch, or can be directly affixed with 3m adhesive (included), which does not require a professional electrician to install and saves labor costs',
+      'Waterproof & Auto ON/OFF: This outdoor wall lights is made of weather resistant ABS material with a waterproof grade of IP65. The outdoor patio lights can withstand various outdoor conditions such as rain, snow, and extreme temperatures. And the solar powered fence lights automatically charge under sunlight. When the rechargeable battery is fully charged, the outdoor solar fence lights can light for at least 10 hours',
+      'Easy to install with no wiring required',
+      'Durable construction for long-lasting use'
+    ],
+    stock: 25,
+    badge: 'Eco-Friendly'
+  },
+  {
+    id: '8x10 Area Rugs Living Room: Fluffy Bedroom Soft Shag Rug Black GreyUpgrade Non-Slip High Pile Carpet Fuzzy Plush Indoor Floor Decor Shaggy Rugs for Kid Boys Girls Playroom Nursery Modern Home',
+    name: '8x10 Area Rugs Living Room: Fluffy Bedroom Soft Shag Rug Black GreyUpgrade Non-Slip High Pile Carpet Fuzzy Plush Indoor Floor Decor Shaggy Rugs for Kid Boys Girls Playroom Nursery Modern Home',
+    price: 55.99,
+    originalPrice: 99.99,
+    rating: 4.6,
+    reviewsCount: 95,
+    category: 'home',
+    image: '/images/carpet.PNG',
+    description: 'Ultra Soft Fluffy 8x10 Area Rugs for Living Room: shag rug treat your feet to cloud-like comfort with our ultra-soft, high-density plush microfiber pile—designed to stay fluffier longer without shedding. Whether walking, sitting, or lying down, each step feels luxuriously soft. Furry fibers resist matting, keeping the plush texture season after season. Ideal for bedroom, living room, or nursery',
+    longDescription: 'Upgraded Non-Slip Backing: 8×10 fluffy area rug is highly soft with a high-density sponge interlayer, and the non-slip bottom with small. Built with a thick felt base and dense latex dots, this living room rug offers strong traction to enhance grip and help prevent slipping on vinyl, hardwood, or tile floors. Designed for pet-friendly homes, and child-safe spaces, this skid-resistant design minimizes movement, providing added safety and comfort',
+    features: [
+      'Modern Design: This soft fluffy area rugs for Living Room Bedroom is designed with a modern minimalist aesthetic that elevates both comfort and visual appeal. Whether placed in the living room, bedroom, playroom, or nursery, its clean and understated look blends effortlessly into any space, creating a cozy, welcoming vibe. Available in various colors and sizes to suit your unique decor needs',
+      'Functional Advantage: Combining comfort and practicality, 8×10 fuzzy fluffy area rugs delivers thermal insulation and sound dampening, fostering a warm and peaceful environment. Its gentle surface cushions every step while helping prevent scratches on your floors. With its non-slip bottom, it ensures safe use—making it an excellent choice for families with young children or elderly individuals',
+      'Complete Package: Your order contains one 8x10 rug (Dimensions: 120"L x 96" W x 1.8"D). For any questions about your rug, our customer service team is ready to assist with any inquiries',
+      'Please Note: The actual living room Rug color may show slight differences from product images due to lighting conditions and screen display variation.This 8x10 shag fuzzy bedroom rug arrives vacuum-packed. Simply lay it flat for 2–3 days, and it will return to its full, fluffy form',
+      'Stylish design that complements modern home decor'
+    ],
+    stock: 20,
+    badge: 'Home Comfort'
+  },
+  {
+    id: 'HAPPRUN 2500 ANSI Lumens Outdoor Projector with Built-in Streaming Apps, 4K Decoding Resolution, Dolby Audio, WiFi 6 and Bluetooth 5.2 for Indoor and Outdoor Home Theater',
+    name: 'HAPPRUN 2500 ANSI Lumens Outdoor Projector with Built-in Streaming Apps, 4K Decoding Resolution, Dolby Audio, WiFi 6 and Bluetooth 5.2 for Indoor and Outdoor Home Theater',
+    price: 125.99,
+    originalPrice: 259.99,
+    rating: 4.7,
+    reviewsCount: 130,
+    category: 'electronics',
+    image: '/images/projector.PNG',
+    description: '[ Built-in Streaming System ] – No extra equipment needed. This smart projector gives you direct access to over 1,000 apps, including Netflix, Prime Video, YouTube, and Hulu. With plug-and-play convenience, it makes movie watching effortless and hassle-free',
+    longDescription: '[ 2,500 ANSI Lumens Brightness ] – Unlike standard tv projectors (500–1,000 lumens) that require a pitch-dark room, our high-brightness outdoor projector delivers vibrant, razor-sharp images even with lights on or in daylight. Perfect for home theaters, living rooms, and outdoor movie nights under the',
+    features: [
+      '[ No Manual Adjustments Needed ] – Smart AI instantly analyzes your room and automatically adjusts focus and image alignment. No matter where you place it—on a table, nightstand, wall, or ceiling—the auto focus projector optimizes instantly for a perfect picture. No more fiddling with settings!',
+      '[ 4K Decoding Resolution ] – The HAPPRUN KC7 PRO projector delivers stunning 4K decoding resolution with a 20,000:1 contrast ratio and 95% color gamut for razor-sharp, lifelike images. With HDR10+ support, it reveals richer colors, deeper blacks, and enhanced shadow detail—bringing the cinema experience straight to your living room',
+      '[ Immersive Theater-Quality Sound ] – Dual 10W high-fidelity speakers with Dolby Audio produce rich, balanced sound featuring crisp highs and deep bass. Every detail shines with stunning clarity, bringing true cinematic audio to your living room with this home theater projector'
+    ],
+    stock: 15,
+    badge: 'Home Theater'
+  },
+ {
+    id: 'Contixo F23 GPS Drone With Camera, 46 Min Flight Time, 4.5" Screen Remote, Follow Me, Waypoints, 5GHz FPV Transmission, Return to Home, Hand Gestures, Orbit Mode Foldable Drones For Teens & Adults',
+    name: 'Contixo F23 GPS Drone With Camera, 46 Min Flight Time, 4.5" Screen Remote, Follow Me, Waypoints, 5GHz FPV Transmission, Return to Home, Hand Gestures, Orbit Mode Foldable Drones For Teens & Adults',
+    price: 80.99,
+    originalPrice: 150.99,
+    rating: 4.9,
+    reviewsCount: 89,
+    category: 'electronics',
+    image: '/images/drone.PNG',
+    description: 'ADVANCED GPS & SMART FLIGHT MODES – The Contixo F23 Drone Navigates with precision using built-in GPS features including Follow Me, Waypoint Flight, Orbit Mode, and Return to Home, hands-free control at any skill level, giving you total control and safety during every flight.',
+    longDescription: 'LONG FLIGHT TIME WITH DUAL BATTERIES – Enjoy up to 46 minutes of total flight time with two included 7.4V 1600mAh batteries of this compact travel drone , each delivering up to 23 minutes per charge for extended outdoor adventures and a 600-ft video transmission range via 5GHz WiFi.',
+    features: [
+      'SMART CONTROLLER WITH 4.5" SCREEN – The camera drone monitor your live camera feed, flight path, and telemetry on a built-in 4.5" screen controller—no smartphone needed for real-time video and control.',
+      'HD 720P CAMERA WITH ADJUSTABLE LENS – The GPS drone captures crystal-clear aerial footage with a 1280×720 resolution camera, featuring a 60° field of view and an adjustable angle from -90° to 0° for the perfect shot every time.',
+      'NO FAA REGISTRATION REQUIRED – The palm-sized drone is weighing just 8.3 oz, under the FAA registration threshold, offering a hassle-free flying experience right out of the box.'
+    ],
+    stock: 20,
+    badge: 'Drones'  
   }
 ];
