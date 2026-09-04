@@ -904,7 +904,7 @@ export const PRODUCTS: Product[] = [
     rating: 4.7,
     reviewsCount: 130,
     category: 'electronics',
-    image: '/images/projector.PNG',
+    image: '/images/projecter.PNG',
     description: '[ Built-in Streaming System ] – No extra equipment needed. This smart projector gives you direct access to over 1,000 apps, including Netflix, Prime Video, YouTube, and Hulu. With plug-and-play convenience, it makes movie watching effortless and hassle-free',
     longDescription: '[ 2,500 ANSI Lumens Brightness ] – Unlike standard tv projectors (500–1,000 lumens) that require a pitch-dark room, our high-brightness outdoor projector delivers vibrant, razor-sharp images even with lights on or in daylight. Perfect for home theaters, living rooms, and outdoor movie nights under the',
     features: [
@@ -923,7 +923,7 @@ export const PRODUCTS: Product[] = [
     rating: 4.9,
     reviewsCount: 89,
     category: 'electronics',
-    image: '/images/drone.PNG',
+    image: '/images/dron.PNG',
     description: 'ADVANCED GPS & SMART FLIGHT MODES – The Contixo F23 Drone Navigates with precision using built-in GPS features including Follow Me, Waypoint Flight, Orbit Mode, and Return to Home, hands-free control at any skill level, giving you total control and safety during every flight.',
     longDescription: 'LONG FLIGHT TIME WITH DUAL BATTERIES – Enjoy up to 46 minutes of total flight time with two included 7.4V 1600mAh batteries of this compact travel drone , each delivering up to 23 minutes per charge for extended outdoor adventures and a 600-ft video transmission range via 5GHz WiFi.',
     features: [
