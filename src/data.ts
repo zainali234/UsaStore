@@ -933,5 +933,170 @@ export const PRODUCTS: Product[] = [
     ],
     stock: 20,
     badge: 'Drones'  
+  },
+  {
+    id: 'L\'AGRATY Faux Rabbit Fur Throw Blanket for Couch, 50\'\' x 60\'\', Cocoa Brown Soft Cozy Bubble Fluffy Blanket for Sofa Bed, Thick Warm Plush Fuzzy Throw for Room Home Decor, Luxury Gift for Women Mom',
+    name: 'L\'AGRATY Faux Rabbit Fur Throw Blanket for Couch, 50\'\' x 60\'\', Cocoa Brown Soft Cozy Bubble Fluffy Blanket for Sofa Bed, Thick Warm Plush Fuzzy Throw for Room Home Decor, Luxury Gift for Women Mom',
+    price: 55.99,
+    originalPrice: 99.99,
+    rating: 4.8,
+    reviewsCount: 75,
+    category: 'home',
+    image: '/images/wool.PNG',
+    description: 'Soft and cozy faux rabbit fur throw blanket for couch, sofa, or bed, perfect for home decor and gifting.',
+    longDescription: 'Wrap yourself in luxury with the L\'AGRATY Faux Rabbit Fur Throw Blanket. Measuring 50" x 60", this plush and fluffy blanket is perfect for adding warmth and style to your living room or bedroom. Its soft texture makes it ideal for snuggling on chilly evenings.',
+    features: [
+      'Ultra Soft & Furry: Our Rabbit Fur Thick Blanket is soft to the touch and perfect for snuggling up on the couch or bed in cold weather, making you feel like you\'re on a cloud. The bubble faux rabbit fur blanket is made of 650GSM premium microfiber polyester, which is extra soft, fuzzy, and fluffy, making it the perfect companion to keep you warm during the fall and winter months',
+      'Reversible Design & Thickness: Our faux fur aesthetic blanket is made of 650GSM rabbit fur fabric and 200GSM fannel fleece fabric lining, this plush blanket is absolutely cozy and thick, and the fabric is fade-resistant, anti-pilling, and anti-static, providing long-lasting softness and durability. The premium and beautiful double sided fabric makes the bubble rabbit fur blanket reversible for extra warmth, an ideal balance of weight and heat for the winter months',
+      'Soft and cozy texture perfect for snuggling',
+      'Durable construction for long-lasting comfort',
+      'Elegant design that complements any home decor'
+    ],
+    stock: 30,
+    badge: 'Home Comfort' 
+  },
+  {
+    id: 'Bamworld Plant Stand with Grow Light Plant Shelf for Mutiple Pots Large Plant Holder for Living Room Patio Boho Home Decor for Gardening Warm Light',
+    name: 'Bamworld Plant Stand with Grow Light Plant Shelf for Mutiple Pots Large Plant Holder for Living Room Patio Boho Home Decor for Gardening Warm Light',
+    price: 55.99,
+    originalPrice: 99.99,
+    rating: 4.8,
+    reviewsCount: 75,
+    category: 'home',
+    image: '/images/garden.PNG',
+    description: 'A stylish plant stand with a built-in grow light, perfect for adding greenery to your living space.',
+    longDescription: 'Flower Stand with Grow Light: The plant light contains 3 supplemental light modes: 1. 48 leds warm white(3000k), only 3000k high uniform light ,like sunlight improve seeding growth ; 2. Warm (660nm): promote plant growth , flowering and fruit; 3. Full Warm White (380nm-780nm), Provide universal full spectrum which can meet the light conditions your plants need most in different stages',
+    features: [
+      '>10 Pots Large Plant Table: The wooden plant shelf includes 10 shelves, which can hold 11-25 pots of regular size. it can hold a high plant pot plant; Bearing up to 150 pounds, it is recommended to place a heavier flower pot below and a lighter flower pot on the upper layer.',
+      'Hanging Flower Stand: Bamworld Plant Table\'s unique hanging functionality. With a spacious 30-inch center and 30”*11.8”*42.5 dimensions, this versatile shelf accommodates tall plants and offers the option to hang it, adding a dynamic dimension to your indoor or outdoor space Perfect as a gift for a plant lover.',
+      'Carbonized Natural Wood: Eucalyptus wood is carbonized at 300°C to enhance waterproof performance and extend service life for both indoor and outdoor use, though outdoor durability may be slightly shorter.',
+      'Easy to assemble and use'
+    ],
+    stock: 20,
+    badge: 'Home Decor'
+  },
+  {
+    id: 'Skechers Women\'s Go Walk Flex Grand Entry Hands Free Slip-Ins, Air-Cooled Memory Foam Insole, ULTRA GO Cushioning, Machine Washable, Vegan',
+    name: 'Skechers Women\'s Go Walk Flex Grand EntryHands Free Slip-Ins, Air-Cooled Memory Foam Insole, ULTRA GO Cushioning, Machine Washable, Vegan',
+    price: 79.99,
+    originalPrice: 129.99,
+    rating: 4.5,
+    reviewsCount: 120,
+    category: 'shoes',
+    image: '/images/shoes.PNG',
+    description: 'Comfortable and stylish walking shoes with advanced cushioning technology.',
+    longDescription: 'EFFORTLESS SLIP-ON DESIGN: These slip on shoes for women feature a convenient hands-free entry with molded heel panel and stretch laces for easy on and off',
+    features: [
+      'SUPERIOR COMFORT TECHNOLOGY: Ultra Go cushioning and Air-Cooled Memory Foam insole provide exceptional comfort for all-day wear',
+      'SECURE FIT: Heel Pillow technology and bungee closure system ensure these slip on sneakers for women stay securely in place',
+      'VERSATILE PERFORMANCE: Super flexible traction outsole makes these womens slip on shoes perfect for walking and everyday activities',
+      
+    ],
+    stock: 25,
+    badge: 'Footwear'
+  },
+  {
+    id: 'Rain Shower Head with Handheld Showerhead, Chrome 1.8GPM 460311 12" High Pressure Rainfall Shower Heads, 9 Sprays Handheld Showerheads, Magnetic Docking, Power Jets, 59" Shower Hose',
+    name: 'Rain Shower Head with Handheld Showerhead, Chrome 1.8GPM 460311 12" High Pressure Rainfall Shower Heads, 9 Sprays Handheld Showerheads, Magnetic Docking, Power Jets, 59" Shower Hose',
+    price: 55.99,
+    originalPrice: 110.99,
+    rating: 4.6,
+    reviewsCount: 95,
+    category: 'bathroom',
+    image: '/images/shower.PNG',
+    description: 'High-pressure rain shower head with handheld showerhead, multiple spray settings, and magnetic docking.',
+    longDescription: 'Upgrade technology ensure amazing showering experience, compare with original magnetic shower head, our rain shower head adopts strong metal magnetic combin buckle structure which can hold your handheld shower head firmly (Patent NO:US011857983B2 & US12269049B1)',
+    features: [
+      'Rainforest experience in home, our high pressure shower heads has 278 spray nozzles committed to provide smooth rain feeling. You can enjoy a truly rain showering experience which leaves you a feeling of relaxing and comfortable',
+      'Careful design brings customers a better experience, our shower heads has 274 anti-clog nozzles plus 4 big strong massage nozzles, you will never worry about cleaning nozzles. What\'s more, 4 big strong massage nozzles flow strong water to your head or shoulder which can massage your body well',
+      'Magnetic Docking System: Easily switch between the rainfall and handheld showerheads with the convenient magnetic docking system.',
+      'Durable Chrome Finish: The chrome finish not only adds a sleek look to your bathroom but also resists tarnishing and corrosion.',
+      'Easy Installation: Comes with all necessary hardware for quick and easy installation.'
+    ],
+    stock: 30,
+    badge: 'Bathroom Upgrade'
+  },
+  {
+    id: 'MAXYOYO Folding Sofa Bed, Convertible Chair Bed with Pillow Foldable Couch with Back Support, Portable Fold Out Chair Comfy Floor Sofa for Living Room Bedroom, Dark Grey, Single',
+    name: 'MAXYOYO Folding Sofa Bed, Convertible Chair Bed with Pillow Foldable Couch with Back Support, Portable Fold Out Chair Comfy Floor Sofa for Living Room Bedroom, Dark Grey, Single',
+    price: 80.99,
+    originalPrice: 150.99,
+    rating: 4.7,
+    reviewsCount: 110,
+    category: 'home',
+    image: '/images/fold.PNG',
+    description: 'Convertible folding sofa bed with pillow, back support, and portable design for living room or bedroom.',
+    longDescription: 'Headrest and Lumbar Pillow: The Headrest and Lumbar Pillow set is designed to provide superior comfort and support, offering a luxurious experience whether you\'re sitting or reclining. The headrest is designed with strap and buckle, ensuring a secure and stable attachment to the folding sofa, effectively preventing any unwanted shifting or displacement. The lumbar pillow supports the natural curve of your lower back, alleviating discomfort during extended periods of sitting',
+    features: [
+      'Durable Fabric: Crafted from premium corded fabric, this material offers a unique visual and tactile experience, elevating the ambiance of your living space. The size of the folding sofa bed is about 33.5"x74.8", which would be tailored to provide comfortable seating or bed for one person',
+      'Comfortable Shredded Foam Filling: The cushion is filled with shredded foam, meticulously crafted to provide superior comfort and support. This innovative filling molds to your body contours, offering personalized cushioning that relieves pressure points and promotes relaxation',
+      'Portable & Foldable: Lightweight and foldable design allows for easy storage and transport.',
+      'Durable Construction: Made with high-quality materials to ensure long-lasting use.', 
+      ],
+    stock: 30,
+    badge: 'Home Comfort'  
+  },
+  {
+    id: 'Ring Pan-Tilt Indoor Cam (newest model) — See all around your home or business with 360° pan coverage, HD video, plus Two-Way Talk (2024 release), White',
+    name: 'Ring Pan-Tilt Indoor Cam (newest model) — See all around your home or business with 360° pan coverage, HD video, plus Two-Way Talk (2024 release), White',
+    price: 55.99,
+    originalPrice: 110.99,
+    rating: 4.8,
+    reviewsCount: 100,
+    category: 'electronics',
+    image: '/images/camera.PNG',
+    description: 'Ring Pan-Tilt Indoor Cam with 360° pan coverage, HD video, and two-way talk for home security.',
+    longDescription: 'The Ring Pan-Tilt Indoor Cam is the newest model that allows you to see all around your home or business with 360° pan coverage. It features HD video quality and two-way talk, making it easy to communicate with anyone in the room.',
+    features: [
+      'See all around — Control your view with Pan-Tilt Indoor Cam, featuring a smooth 360° view you control from your phone.',
+      'Find your perfect angle — Pan 360° around your home and tilt up and down, all in the Ring app.',
+      'Know and respond in real time — View and respond to activity with Live View and Two-Way Talk.',
+      'Easy Installation: Simple setup process with user-friendly instructions.',
+      'See clearly, day or night — Get a clearer picture at any hour with HD Video and Color Night Vision.'
+    ],
+    stock: 20,
+    badge: 'Home Security'
+  },
+  {
+    id: 'Potane Precision Vacuum Machine,Pro Food Sealer with Built-in Cutter and Bag Storage(Up to 20 Feet Length), Both Auto Manual Options,2 Modes,Includes 2 Bag Rolls 11”x16’ and 8”x16’,Compact Design',
+    name: 'Potane Precision Vacuum Machine,Pro Food Sealer with Built-in Cutter and Bag Storage(Up to 20 Feet Length), Both Auto Manual Options,2 Modes,Includes 2 Bag Rolls 11”x16’ and 8”x16’,Compact Design',
+    price: 89.99,
+    originalPrice: 140.99,
+    rating: 4.7,
+    reviewsCount: 90,
+    category: 'kitchen',
+    image: '/images/sealer.PNG',
+    description: 'Professional food vacuum sealer with built-in cutter, bag storage, and multiple sealing modes.',
+    longDescription: 'A WORKHORSE FOR HOUSEHOLD USE: The pre-programmed settings for each food mode are strictly tuned by engineers, allowing you to seal like a pro. It can be used over 100 times continuously, perfect for bulk foods, leftovers, and valuable items.',
+    features: [
+      'ONE-HAND & C-TYPE HALF-WRAPPED CHAMBER DESIGN: This machine is designed for one-handed operation. The lid can be easily locked and is user-friendly. The construction prevents the components and functions from becoming dusty, rusty, and damaged.',
+      'Auto & Manual Options: Choose between automatic and manual sealing modes to suit your specific needs, whether you are sealing delicate items or larger quantities.',
+      'ALL-INCLUSIVE VERSATILE MODEL: This all-inclusive machine was designed with built-in bag storage and a cutter bar, an accessory port for sealing containers, jars, bottle stoppers, 2 bag rolls (11”x16’ and 8”x16’), and an extra foam gasket for replacement.',
+      'Durable Construction: Made with high-quality materials for long-lasting performance.',
+      'HIGH-POWER VACUUM AND RELIABLE CONTINUOUS SEALING: The POTANE VS5736 uses an 8 mm sealing element (3 mm sealing width) and a brushless mechanical motor compared to the 3 mm sealing element (1-2mm sealing width) and toy motor of others.'
+    ],
+    stock: 25,
+    badge: 'Kitchen Essential'
+  },
+  {
+    id: 'Phueut Pressurized Handheld Multi-Surface Natural Steam Cleaner with 12 pcs Accessories, Multi-Purpose Steamer for Home Use, Steamer for Cleaning Floor, Upholstery, Grout and Car (Grey)',
+    name: 'Phueut Pressurized Handheld Multi-Surface Natural Steam Cleaner with 12 pcs Accessories, Multi-Purpose Steamer for Home Use, Steamer for Cleaning Floor, Upholstery, Grout and Car (Grey)',
+    price: 59.99,
+    originalPrice: 130.99,
+    rating: 4.6,
+    reviewsCount: 85,
+    category: 'home',
+    image: '/images/floor.PNG',
+    description: 'Handheld multi-surface steam cleaner with pressurized steam and 12 accessories for versatile cleaning.',
+    longDescription: 'The Phueut Pressurized Handheld Multi-Surface Natural Steam Cleaner is designed for efficient and effective cleaning of various surfaces in your home. With its pressurized steam and included accessories, it can tackle floors, upholstery, grout, and even your car.',
+    features: [
+      'POWERFUL HOT STEAM - 1050 watts with 3-5 minutes fast heat-up and emits pressurized powerful hot steam 230℉ for up to 8-12 minutes',
+      'MULTI-SURFACE CLEANING - Steamer is suited for virtually all hard surfaces including: ceramic, marble and sealed hard wood. It\'s great for tile, sinks, stoves, windows, sofa, toy and car',
+      'CHEMICAL FREE & SAFE - Phueut steam cleaners for home use 100% Chemical free with no harmful fumes or residue. Safety child cap extra protects your families\' safety! Healthy and friendly steamer for kids and pets',
+      '12-PIECE ACCESSORIES SET - This steam cleaner comes with exclusive free 12 pieces accessory kit, Includes 4 round brushes and other attachments to meet your different needs. Our all-in-one steamer can deep clean for your home',
+      'LARGE WATER TANK - Steam cleaner features a large water tank of 350ml capacity (recommended load capacity is within 280ml) which allows you to focus on cleaning, instead of refilling often. The ergonomic handle reduces hand strain, allowing for comfortable use even during extended cleaning sessions'
+    ],
+    stock: 20,
+    badge: 'Home Cleaning'
   }
 ];
