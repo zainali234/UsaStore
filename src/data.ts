@@ -1098,5 +1098,543 @@ export const PRODUCTS: Product[] = [
     ],
     stock: 20,
     badge: 'Home Cleaning'
+  },
+  {
+    id: 'Brio Bottom Loading Water Cooler Dispenser for 5 Gallon Bottles - 3 Temperatures with Hot, Room & Cold Spouts, Child Safety Lock, LED Display with Empty Bottle Alert, Stainless Steel',
+    name: 'Brio Bottom Loading Water Cooler Dispenser for 5 Gallon Bottles - 3 Temperatures with Hot, Room & Cold Spouts, Child Safety Lock, LED Display with Empty Bottle Alert, Stainless Steel',
+    price: 89.99,
+    originalPrice: 159.99,
+    rating: 4.7,
+    reviewsCount: 95,
+    category: 'home',
+    image: '/images/water.PNG',
+    description: 'Bottom loading water cooler dispenser with hot, room, and cold spouts, child safety lock, and LED display.',
+    longDescription: 'BOTTOM LOAD WATER COOLER DISPENSER: Don’t struggle to lift heavy bottles. Simplify your life with a bottom loading water cooler dispenser for 5 gallon bottles. The cabinet fits either a 3- or 5-gallon jug bottles and perfectly accommodates both.',
+    features: [
+      'HOT, COLD & ROOM-TEMPERATURE WATER: Three temperature settings allow you to customize your drinking experience. The Brio Essential hot and cold water dispenser features hot, cold, and room-temperature functions for either refreshing and satisfying hydration or a soothing hot beverage.',
+      'CHILD-SAFETY LOCK: Never worry about accidental pouring of hot water again with the two-step dispenser on the hot-water spout. Simply release the lock located above the dispensing button and enjoy soothing hot water at your fingertips. Rest assured that the safety of you and your loved ones are in the hands of Brio Water Engineers.',
+      'CHILD SAFETY LOCK - Ensures that children cannot accidentally dispense hot water, providing peace of mind for families.',
+      'INNOVATIVE DESIGN: The stylish design features a stainless-steel accent and is the perfect 3 or 5 gallon water cooler dispenser for any home or office. The elegance of this unit will add style anywhere while also delivering refreshingly cool or soothing hot water at your fingertips.',
+      'INCLUDED COMPONENTS: 3 or 5 Gallon Bottle Bottom Loading Water Cooler Dispenser for use with 3 or 5 gallon water bottle (not included), Manual, Care Guide'
+    ],
+    stock: 15,
+    badge: 'Home Essentials'  
+  },
+  {
+    id: 'Astercook 21 Pcs Pots and Pans Set Non Stick, Ceramic Cookware Set Detachable Handle, RV Kitchen Cooking Set Removable Handles, Oven Safe, Induction Ready, Stackable, Black, Fathers Day Gift for Men',
+    name: 'Astercook 21 Pcs Pots and Pans Set Non Stick, Ceramic Cookware Set Detachable Handle, RV Kitchen Cooking Set Removable Handles, Oven Safe, Induction Ready, Stackable, Black, Fathers Day Gift for Men',
+    price: 80.99,
+    originalPrice: 159.99,
+    rating: 4.8,
+    reviewsCount: 110,
+    category: 'kitchen',
+    image: '/images/cook.PNG',
+    description: '21-piece non-stick ceramic cookware set with detachable handles, oven safe, and induction ready.',
+    longDescription: '【High-Performance Nonstick Coating】 Equipped with a premium nonstick coating, our pots and pans offer exceptional durability and performance. Easy to clean and free from harmful chemicals like PFOA, it ensures a healthier cooking experience.',
+    features: [
+      '【Secure Removable Handle】Cookware set features a cutting-edge removable handle with a secure locking mechanism. This ensures a stable and reliable grip during cooking, so you can cook with confidence every time.',
+      '【Convenient Storage and Cleaning】 The detachable handle design saves valuable storage space and simplifies cleanup. Easily remove the handle for a quick and thorough wash, keeping your cookware and kitchen spotless.',
+      '【Versatile Compatibility】 Pots and pans sets are suitable for a wide range of heat sources, including induction, gas and ceramic hobs. Ensure that the cookware sets are uniformly heated in a stable and efficient manner under all cooking conditions.',
+      'STACKABLE DESIGN - Saves space in your kitchen or RV.',
+      'DURABLE CONSTRUCTION - Made with high-quality materials for long-lasting performance.'
+    ],
+    stock: 20,
+    badge: 'Kitchen Essential'
+  },
+  {
+    id: 'Ninja Fresh Brew Coffee Maker, 12 Cup Glass Carafe, Stainless Steel, CE251 Programmable, Classic & Rich brew, 70-oz. Removable Water Reservoir, Small Batch, 24-hr Delay Brew, Adjustable Warming Plate',
+    name: 'Ninja Fresh Brew Coffee Maker, 12 Cup Glass Carafe, Stainless Steel, CE251 Programmable, Classic & Rich brew, 70-oz. Removable Water Reservoir, Small Batch, 24-hr Delay Brew, Adjustable Warming Plate',
+    price: 89.99,
+    originalPrice: 149.99,
+    rating: 4.5,
+    reviewsCount: 85,
+    category: 'kitchen',
+    image: '/images/coffee.PNG',
+    description: 'Programmable coffee maker with a 12-cup glass carafe and removable water reservoir.',
+    longDescription: 'The Ninja Fresh Brew Coffee Maker is designed to deliver the perfect cup of coffee every time. With its programmable settings and 12-cup glass carafe, you can enjoy fresh coffee whenever you want.',
+    features: [
+      '2 BREW STYLES: Classic or Rich, each brew is flavorful and never bitter with custom brew strengths.',
+      '12-CUP GLASS CARAFE: Brew small or large batches of coffee – perfect for day to day or entertaining.',
+      'HOTTER BREWING TECHNOLOGY: Delivers even saturation and temperature control for ultra-flavorful coffee.',
+      'SMALL BATCH FUNCTION: Ensure your coffee is never diluted when brewing a small batch (1-4 cups).',
+      'WAKE UP TO HOT COFFEE: 24-hour programmable delay brew allows you to prepare your brew up to a day in advance.'
+    ],
+    stock: 15,
+    badge: 'Kitchen Essential'
+  },
+  {
+    id: 'Omumax Neck Massager with Heat, Cordless Human-Like Massage, GreenNeck Massager with 2 Heat Levels & 10-Min Auto Shut-Off, Pain Relief for Neck & Shoulders at Home, Office or Before Sleep',
+    name: 'Omumax Neck Massager with Heat, Cordless Human-Like Massage, GreenNeck Massager with 2 Heat Levels & 10-Min Auto Shut-Off, Pain Relief for Neck & Shoulders at Home, Office or Before Sleep',
+    price: 80.99,
+    originalPrice: 110.99,
+    rating: 4.0,
+    reviewsCount: 120,
+    category: 'health',
+    image: '/images/massage.PNG',
+    description: 'Cordless neck massager with heat for pain relief.',
+    longDescription: 'Simulated Hand Massage: The Omumax shoulder and neck massager simulates a real palm massage, with ten fingers touching and kneading to help ease tension and provide comfort for tired neck and shoulders. The dual massage heads imitate the human thumb and palm, deeply relaxing tight muscle groups through grasping and releasing kneading movements, bringing the comfort and stress relief of a real massage',
+    features: [
+      'Two-Level Adjustable Soothing Heat: The Neck and Shoulder Massager features a soothing heat function. Choose between low-temperature soothing or high-temperature deep penetration. The gentle warmth, combined with kneading massage, is delivered directly to the skin\'s deeper layers—ideal for tired necks and shoulders',
+      'Specifically Designed for Neck Comfort: The Omumax neck massager features an ergonomic design optimized for the natural curve of the human neck, perfectly conforming to the neck and shoulder area. By simulating deep kneading and soothing heat like a human hand, it helps to release tightness and promote relaxation, especially after prolonged sitting or office work',
+      '【Human-Like Massage】 Mimics the feel of a human hand for a more natural massage experience.',
+      'Portable: Whether during your office lunch break, relaxing on the couch at home, or traveling on business, enjoy soothing massages anytime, anywhere',
+      
+    ],
+    stock: 25,
+    badge: 'Health & Wellness'
+  },
+  {
+    id: 'SKG FSA G7 Pro Fold Neck Massager for Strain Relief Deep TissueHSA Eligible Heat and Vibration Cordless Travel Massager, Birthday Gifts Foldable Neck Massager for Office Home Car Travel',
+    name: 'SKG FSA G7 Pro Fold Neck Massager for Strain Relief Deep TissueHSA Eligible Heat and Vibration Cordless Travel Massager, Birthday Gifts Foldable Neck Massager for Office Home Car Travel',
+    price: 79.99,
+    originalPrice: 129.99,
+    rating: 4.5,
+    reviewsCount: 95,
+    category: 'health',
+    image: '/images/neck.PNG',
+    description: 'Foldable neck massager with heat and vibration for deep tissue strain relief.',
+    longDescription: '𝗨𝗻𝗶𝗾𝘂𝗲 𝗩𝗶𝗯𝗿𝗮𝘁𝗶𝗻𝗴 𝗥𝗲𝗱 𝗟𝗶𝗴𝗵𝘁 𝗠𝗮𝘀𝘀𝗮𝗴𝗲 - SKG G7pro-Fold Neck Massager is equipped with 9 upgraded vibrating massage heads, each offering a larger massage area. The vibration massage of each head is 30% higher than the previous generation, providing deeper relaxation',
+    features: [
+      '𝗠𝗲𝗲𝘁 𝗬𝗼𝘂𝗿 𝗗𝗶𝗳𝗳𝗲𝗿𝗲𝗻𝘁 𝗡𝗲𝗲𝗱𝘀 - Foldable Neck Massager with Heat has 5 modes and 4 levels of heat and vibration, you can customize your massage modes and heat according to different needs. Tip: Lightly wiping the massage heads with a wet wipe before use may help deliver a smoother, more comfortable massage experience',
+      '𝗕𝗲𝘁𝘁𝗲𝗿 𝗧𝗵𝗮𝗻 𝗣𝗲𝗿𝗰𝘂𝘀𝘀𝗶𝗼𝗻 𝗡𝗲𝗰𝗸 𝗠𝗮𝘀𝘀𝗮𝗴𝗲𝗿 - Compared to other percussion massagers, G7 Pro Fold neck massager adopts unique massage technology to bring better massage experience. Weighing only 270g, the Neck Massager is lighter and more portable than traditional shoulder and neck massagers. Furthermore, it provides a more relaxing experience than ordinary massagers',
+      '𝗪𝗼𝗻 𝗚𝗲𝗿𝗺𝗮𝗻𝘆 𝗜𝗙 𝗗𝗲𝘀𝗶𝗴𝗻 𝗔𝘄𝗮𝗿𝗱 - Winner of the German IF Design Award 2024, the SKG G7 Pro Fold Neck Massager is designed with a protein leather neck cushion for enhanced comfort. Crafted with high-quality PU leather, it exudes sophistication. With its multi-functional rocker buttons, it offers convenient control. This unique design makes it the perfect gift choice for your family and friends',
+      'Vibration Therapy: The vibration feature adds an extra layer of relief, helping to soothe and relax the neck and shoulder muscles.',
+      'Portable and Convenient: Lightweight and compact, making it easy to use anywhere, anytime.'
+    ],
+    stock: 30,
+    badge: 'Health & Wellness'
+  },
+  {
+    id: 'Etekcity WiFi 8-Electrode Smart Scale for Body Weight and FatBody Composition Scale with Color Handle Display, 50+ Metrics, 5-Segment Analysis, WiFi Auto Sync and USB-C Charging',
+    name: 'Etekcity WiFi 8-Electrode Smart Scale for Body Weight and FatBody Composition Scale with Color Handle Display, 50+ Metrics, 5-Segment Analysis, WiFi Auto Sync and USB-C Charging',
+    price: 89.99,
+    originalPrice: 149.99,
+    rating: 4.6,
+    reviewsCount: 80,
+    category: 'health',
+    image: '/images/weight.PNG',
+    description: 'Smart scale with WiFi connectivity, 8 electrodes, and comprehensive body composition analysis.',
+    longDescription: '𝐓𝐫𝐮𝐬𝐭𝐞𝐝 𝐁𝐨𝐝𝐲 𝐂𝐨𝐦𝐩𝐨𝐬𝐢𝐭𝐢𝐨𝐧 𝐑𝐞𝐬𝐮𝐥𝐭𝐬: Science-backed system designed to better reflect real body composition changes over time, powered by an advanced 8-electrode, dual-frequency technology',
+    features: [
+      '𝐅𝐮𝐥𝐥-𝐁𝐨𝐝𝐲 𝐀𝐧𝐚𝐥𝐲𝐬𝐢𝐬: Measure more than weight with 5-segment body analysis and more than 50 body metrics. Track how fat and muscle are distributed across your arms, legs, and torso for a more complete understanding of your body composition',
+      '𝐅𝐮𝐥𝐥-𝐁𝐨𝐝𝐲 𝐀𝐧𝐚𝐥𝐲𝐬𝐢𝐬: Measure more than weight with 5-segment body analysis and more than 50 body metrics. Track how fat and muscle are distributed across your arms, legs, and torso for a more complete understanding of your body composition',
+      '𝐌𝐞𝐚𝐬𝐮𝐫𝐞 𝐘𝐨𝐮𝐫 𝐖𝐚𝐲: View key body metrics directly on the scale with an interactive color display and guided measurements, or view deeper insights in the VeSync app',
+      '𝐂𝐨𝐧𝐧𝐞𝐜𝐭 𝐭𝐨 𝐘𝐨𝐮𝐫 𝐖𝐞𝐥𝐥𝐧𝐞𝐬𝐬 𝐄𝐜𝐨𝐬𝐲𝐬𝐭𝐞𝐦: Connect via Bluetooth or Wi-Fi and sync with Apple Health, Samsung Health, MyFitnessPal, Apple Watch, and other popular health platforms to track trends and generate reports',
+      '𝐃𝐞𝐬𝐢𝐠𝐧𝐞𝐝 𝐟𝐨𝐫 𝐄𝐯𝐞𝐫𝐲𝐨𝐧𝐞: Create unlimited user profiles with automatic user recognition. Baby Mode and Zero-Current Mode make it easy to track a variety of goals, lifestyles, and life stages',
+      '𝐏𝐫𝐞𝐦𝐢𝐮𝐦 𝐃𝐞𝐬𝐢𝐠𝐧 𝐁𝐮𝐢𝐥𝐭 𝐭𝐨 𝐋𝐚𝐬𝐭: Made with durable ITO-coated glass, a high-capacity platform supporting up to 440 lb, and USB-C rechargeable with up to 3 months of battery life per charge for reliable daily use'
+    ],
+    stock: 25,
+    badge: 'Health & Wellness'
+  },
+  {
+    id: 'YOLEO Adjustable Weight Bench, ASTM-Certified 827LBS | 98% Pre-Assembled, 84-90 Positions Incline Decline Flat, Foldable Gym Bench with Wider Seat for Home.',
+    name: 'YOLEO Adjustable Weight Bench, ASTM-Certified 827LBS | 98% Pre-Assembled, 84-90 Positions Incline Decline Flat, Foldable Gym Bench with Wider Seat for Home.',
+    price: 85.99,
+    originalPrice: 159.99,
+    rating: 4.7,
+    reviewsCount: 90,
+    category: 'fitness',
+    image: '/images/seat.PNG',
+    description: 'Adjustable weight bench with multiple incline, decline, and flat positions for home workouts.',
+    longDescription: '【ASTM-Certified 827LBS Capacity, Max User Weight 330LBS】Independently tested and ASTM-certified to 827LBS—a spec most benches at this price point never come close to. Dual-triangle steel frame engineered for stability and silence through heavy dumbbell press, loaded hip thrusts, and barbell work. Every component tested and certified. Not a promise—a test result.',
+    features: [
+      '【Open Box, Insert 2 Pins, Start Lifting】No tools. No instruction manual. No frustrating assembly. YOLEO ships 98% pre-assembled — ready in 5 seconds. Just insert one ring pin and one ball pin, and you\'re ready to go. Most users are lifting within 60 seconds of opening the box. Optional leg pad included for more exercise variety — put them on when you have a moment, or start training right away.',
+      '【84 Adjustable Positions for Every Angle Your Training Demands】7 back + 4 seat + 3 leg adjustments unlock every training plane your home gym needs: flat bench press, incline dumbbell fly, decline crunch, upright shoulder press, Bulgarian split squat, seated curl. Switch angles in seconds with ladder-lock—no fumbling between exercises, no momentum lost between sets. One bench. Every muscle.',
+      '【13" Wide Seat & 28" Backrest Built for Real Reps】13" wide seat and 28" extended backrest fully support your spine and hips through every set—no slipping on incline press, no lower back exposure on decline work. Dense foam padding with premium PU leather holds up just as well after years of use as it does on day one. Built for people who actually show up and train.',
+      '【Folds in Seconds, Disappears Until Gym Time】Pull just two pins—done. Collapses to 31.5"x12.6"x13", slides under your bed, behind the sofa, into any closet corner. Built-in transport handle means one person moves it anywhere. At 23.1LBS light enough to relocate, sturdy enough to stay put during your hardest sets. Your living room stays a living room—until it doesn\'t.',
+      '【Train Chest, Back, Shoulders, Arms, Legs & Core—All at Home】Incline for chest activation. Decline for core engagement. Upright for shoulder isolation. Flat for raw pressing power. 3.1" thick thigh pad protects your legs during decline work and leg drives—no metal edges, no discomfort, just reps. A complete home training solution in a single bench. Your gym. Your rules.'
+    ],
+    stock: 20,
+    badge: 'Fitness Equipment'
+  },
+  {
+    id: 'Kitchen System, 1400WP, Auto-iQ, Red, BN801RD1BRN5',
+    name: 'Kitchen System, 1400WP, Auto-iQ, Red, BN801RD1BRN5',
+    price: 95.99,
+        originalPrice: 179.99,
+        rating: 4.5,
+        reviewsCount: 120,
+        category: 'kitchen',
+        image: '/images/blender.PNG',
+    description: 'Multi-functional kitchen system for smoothies, chopping, and dough preparation.',
+    longDescription: 'MORE FUNCTIONALITY: The Ninja Professional Plus Kitchen System with Auto-iQ features a new modern design and more functionality than Ninja\'s original Kitchen System. (Versus BL770 based on the number of available blending programs.)',
+    features: [
+      '5 VERSATILE FUNCTIONS: This blender and food processor combo includes 5 preset Auto-iQ programs for smoothies, frozen drinks, nutrient extractions*, chopping, and mixing dough. *Extract a drink containing vitamins and nutrients from fruits and vegetables.',
+      '【POWERFUL CRUSHING: Total Crushing Blades give you perfectly crushed ice for smoothies or frozen drinks with 1400 peak watts of professional power.',
+      'FOOD PROCESSING: The 8-cup Precision Processor Bowl provides precision processing for even chopping and smooth purees.',
+      'AUTO-IQ TECHNOLOGY: Take the guesswork out of drink making with intelligent programs that combine unique timed pulsing, blending, and pausing patterns that do the work for you at the touch of a button.'
+    ],
+    stock: 15,
+    badge: 'Kitchen Appliances'
+  },
+  {
+    id:'Kalamera Full Body Massage Chair Pad with Neck Back Foot Shiatsu Massaging Deep kneading roller massage vibration neck and back massager for chair',
+    name: 'Kalamera Full Body Massage Chair Pad with Neck Back Foot Shiatsu Massaging Deep kneading roller massage vibration neck and back massager for chair',
+    price: 99.99,
+    originalPrice: 179.99,
+    rating: 4.7,
+    reviewsCount: 100,
+    category: 'health',
+    image: '/images/body.PNG',
+    description: 'Full body massage chair pad with shiatsu massage for neck, back, and feet.',
+    longDescription: 'Neck Shiatsu Massage & Back Roller Massage - Kalamera massage chair pad is equipped with 2 deep kneading nodes for neck, 2 rolloer massager for back and 2 vibration pads for hip, allowing you to enjoy comfortable shiatsu massage, roller massage and vibration massage while sitting.',
+    features: [
+      'Foot Shiatsu Massage & Calf Vibration Massage - The included Kalamera foot and calf massager provides the shiatsu massage for foot and the vibration massage for calf. You could place it under a desk, near a sofa or beside a recliner for everyday use.',
+      'Flexible Modular Design for Independent Use - The back massager for chair and the foot massager can be connected for a full-body setup or used separately based on different needs. Use only the massage chair pad while working at your desk or enjoy the foot and calf massager independently while sitting on the sofa.',
+      'Fits Most Chairs, Sofas & Recliners - The Kalamera back massager for chair fits mosts of office chairs, sofas, recliners and lounge chairs. Its modular design allows it to be easily moved between rooms, making it suitable for use in the living room, bedroom, study room, office or apartment.',
+      'Great Choice for People with Sedentary Lifestyles - Kalamera massage chair pad with foot and calf massager is ideal for people who spend long hours sitting throughout the day, including office workers, remote employees, drivers and gamers. The multi-area massage design provides a convenient way to enjoy daily massage sessions at home or in the office.',
+      'PORTABLE DESIGN: The lightweight and portable design allows you to use the massage chair pad on various chairs and recliners.'
+    ],
+    stock: 20,
+    badge: 'Health & Wellness'
+
+  },
+  {
+    id: 'Soundcore Liberty 5 Pro by Anker Noise Cancelling Wireless EarbudsAnker Thus™ AI Chip delivers Guinness World Records-certified call quality for crystal-clear calls in noisy environments',
+    name: 'Soundcore Liberty 5 Pro by Anker Noise Cancelling Wireless EarbudsAnker Thus™ AI Chip delivers Guinness World Records-certified call quality for crystal-clear calls in noisy environments',
+    price: 89.99,
+    originalPrice: 159.99,
+    rating: 4.8,
+    reviewsCount: 150,
+    category: 'electronics',
+    image: '/images/earbuds.PNG',
+    description: 'Noise cancelling wireless earbuds with AI chip for crystal-clear calls.',
+    longDescription: 'Wirecutter\'s Top Pick & Guinness World Record: Named the Top Pick in Wirecutter\'s "The Best Noise-Cancelling Headphones (The New York Times). Also Guinness World Records certified for highest speech quality — powered by a 10-sensor matrix (8 mics + 2 bone conduction sensors) and the Thus AI Chip.',
+    features: [
+      'Whisper-Clear Calls: Equipped with 10 sensors and the Thus AI Chip, enjoy crystal-clear calls in 100 dB+ noisy environments or even quiet rooms. Whisper, speak, or shout—your voice is always heard, anywhere you go.',
+      'Instant Pure Silence: 100% more effective noise cancellation than our previous flagship model. Powered by 8 sensors and the Thus AI Chip, the earbuds process 384K+ noise signals per second, blocking subway, office, or street chaos for instant silence.With ANC on, get up to 6.5 hours of playtime, or up to 28 hours with the case. Need a quick boost? A 5-minute charge gives you 4 hours of listening. (Note: In Extreme mode, battery life is 2.5 hours, or 10.5 hours with the case, when multiple features are enabled. Data based on internal testing.)',
+      'Your Signature Sound: HearID 5.0 with personalized EQ and an AI Audio Enhancer deliver sound precisely tuned to your ears. No more compromises with generic, standard audio.',
+      'Lag-Free Voice Control: With 20 built-in commands, you can skip songs, take calls, and adjust the volume—offline processing ensures zero delay.'
+    ],
+    stock: 30,
+    badge: 'Electronics'
+  },
+  {
+    id: 'Pioneer Camp Men\'s 3-in-1 Snow Ski Jacket Puffer Liner Insulated Waterproof Rain Jackets Winter Windbreaker Snowboard Coat',
+    name: 'Pioneer Camp Men\'s 3-in-1 Snow Ski Jacket Puffer Liner Insulated Waterproof Rain Jackets Winter Windbreaker Snowboard Coat',
+    price: 89.99,
+    originalPrice: 159.99,
+    rating: 4.8,
+    reviewsCount: 150,
+    category: 'apparel',
+    image: '/images/jackets.PNG',
+    description: 'Insulated waterproof snow ski jacket for men.',
+    longDescription: '3-in-1 with Puffer Liner: This men’s 3-in-1 ski jacket features a waterproof outer shell and a zip-in puffer liner that can be worn 3 ways: as a standalone shell, the inner puffer jacket alone, or both together for maximum warmth. The inner puffer jacket is secured at the back neck with a snap loop and features a universal zip-in system compatible with all our 3-in-1 jackets.',
+    features: [
+      'Waterproof & Breathable: Crafted with a professional-grade waterproof outer shell and a waterproof membrane, this snow jacket for men delivers superior waterproofness (15,000+mmH₂O) and moisture permeability (8,000g/m²/24h). Interior mesh panels enhance breathability without sacrificing waterproofing. Seamless waterproof taping ensures no leakage, even in heavy snow or rain.',
+      'Windproof & Stain-Repellent: Engineered with a tightly woven fabric structure, men’s winter jacket effectively guards against harsh winds. The surface has a level-5 anti-stain treatment—dust and dirt from hiking or climbing wipe off effortlessly. Designed for rugged terrain, rocky paths, and intense outdoor use.',
+      'Functional Design: Designed for outdoor performance, the snowboard jacket men features a detachable hood with adjustable Velcro that contour to your head for wind protection without blocking your view. The high stand collar is lined with soft cotton for extra comfort, while YKK 2-way zippers allow easy ventilation. Hidden hem drawcords keep out cold wind, and adjustable Velcro cuffs provide a snug fit.'
+    ],
+    stock: 30,
+    badge: 'Apparel'
+  },
+  {
+    id: 'Portable Washing Machine, Folding 20L Mini Washer and Spin-Dryer3 modes with deep cleaning. Compact for apartments, dorms, home, RV, and travel. For small clothes and delicates. Black.',
+    name: 'Portable Washing Machine, Folding 20L Mini Washer and Spin-Dryer3 modes with deep cleaning. Compact for apartments, dorms, home, RV, and travel. For small clothes and delicates. Black.',
+    price: 75.99,
+    originalPrice: 145.99,
+    rating: 4.5,
+    reviewsCount: 80,
+    category: 'home',
+    image: '/images/washing.PNG',
+    description: 'Compact portable washing machine for small loads.',
+    longDescription: '【Hygienic Separate Washing for Delicates】2026 Upgraded Washer: Unleashes powerful spin and next-gen blue light for exceptional clean. Enjoy a private laundry space with this portable washer. It keeps underwear, socks, baby clothes, workout clothing or delicate fabrics separate from daily laundry, ensuring hygienic and gentle cleaning without cross-contamination. Made of TPE and food-grade silicone, it’s safe for your family’s health.',
+    features: [
+      '20L Capacity with Foldable Compact Design: 20L capacity handles multiple small garments at once. Foldable design (12x12x13 inches unfolded / 12x12x6 inches folded) and 3.5 lbs lightweight build make it easy to store under beds or closets. Suitable for dorms, apartments, RVs, travel, camping or hotel stays',
+      '【Energy-Saving & Versatile for All Scenarios】This efficient mini washer reduces water and power consumption while maintaining strong performance, saving resources and money per cycle. 3 cleaning modes (3/5/10 minutes) adapt to different needs, working reliably at home, on road trips, camping or in dorms — your go-to laundry companion anywhere.',
+      '【Compact Washer with Spin Basket】 Perfect for washing small everyday items such as underwear, socks, baby clothes, sports bras, and lightweight garments. After washing, divide the load into multiple spin cycles. The compact spin basket is designed for up to 3 pieces of underwear or 1 sports bra/tank top per cycle to ensure safe and stable operation. It removes excess water but does not completely dry clothes.',
+      '【Worry-Free After-Sale & User-Friendly Details】Equipped with a spin basket for convenient drying. Easy to carry and operate, with intuitive timer buttons. We offer satisfactory customer service for any questions — ensuring a smooth shopping experience.'
+    ],
+    stock: 25,
+    badge: 'Home' 
+  },
+  {
+    id: 'BLACK+DECKER 5-in-1 Microwave Oven Air Fryer Combo, 0.9 Cu.Ft, 900WCountertop Microwave, Convection Bake & Roast, Child Lock, 10 Power Levels, for Small Kitchens & RVs',
+    name: 'BLACK+DECKER 5-in-1 Microwave Oven Air Fryer Combo, 0.9 Cu.Ft, 900WCountertop Microwave, Convection Bake & Roast, Child Lock, 10 Power Levels, for Small Kitchens & RVs',
+    price: 89.99,
+    originalPrice: 149.99,
+    rating: 4.3,
+    reviewsCount: 60,
+    category: 'home',
+    image: '/images/oven.PNG',
+    description: 'Versatile countertop microwave with air frying capabilities.',
+    longDescription: '5-in-1 Microwave Oven: Use this essential countertop appliance for cooking in five functions: microwave, air fryer, combi (grill/convection), bake, and roast for all of your culinary needs',
+    features: [
+      '10 Cooking Levels: Featuring a 900-watt output, this compact microwave has 7 auto menus, including settings for Beverage, Fresh/Frozen Vegetables, Oatmeal, Potato, Popcorn, and Frozen Pizza.',
+      'Air Fry Presets: This small-but-mighty microwave has 11 preset air fry menus, including for cooking frozen French fries, steak fries, squid rings, chicken nuggets/wings/legs, fish sticks/fillets, cheese sticks, vegetables, and spring rolls with an easy-to-use operation.',
+      'Speedy Cooking: Directly press the start button to cook food at 100% power for 30 seconds and press again for an additional 30 seconds.',
+      'Child Lock Feature: Ensures safety when children are around.'
+    ],
+    stock: 30,
+    badge: 'Home'
+  },
+  {
+    id: 'The AirScent Waterless Diffuser - Cold Air Scent Diffuser Oil MachineFor Homes, Offices, Hotels and Spas - Aromatherapy Diffuser For Aesthetic Scenting - Black - 4.05 Oz - Fragrance Included',
+    name: 'The AirScent Waterless Diffuser - Cold Air Scent Diffuser Oil MachineFor Homes, Offices, Hotels and Spas - Aromatherapy Diffuser For Aesthetic Scenting - Black - 4.05 Oz - Fragrance Included',
+    price: 69.99,
+    originalPrice: 99.99,
+    rating: 4.5,
+    reviewsCount: 120,
+    category: 'home',
+    image: '/images/air.PNG',
+    description: 'Aromatherapy diffuser for aesthetic scenting.',
+    longDescription: 'Truly Waterless Design — Fill the container with fragrance oil (min. recommended for best performance), plug in, and enjoy. No water, no mess.',
+    features: [
+      'Whisper-Quiet Functionality – Operates almost silently for scenting in homes, offices, or any space.',
+      'Refillable Diffuser Oil Bottles Available - Extra bottles available in our store for replacing or switching oils to match any mood or ambiance.',
+      'Night Light Feature – Customizable, energy-efficient LED night light provides a calming glow while dispersing fragrance oils.',
+      'Easy to Use: Simple operation with a single button control.'
+    ],
+    stock: 50,
+    badge: 'Home'
+  },
+  {
+    id: 'Galaxy Projector for Bedroom,29 Soothing Sounds Machine,16 HD Disc Ocean Ceiling Planetarium Star Night Light Projector,Remote Timer Bluetooth Speaker,Gifts for Boys & Girls,Sensory Product for Kids',
+    name: 'Galaxy Projector for Bedroom,29 Soothing Sounds Machine,16 HD Disc Ocean Ceiling Planetarium Star Night Light Projector,Remote Timer Bluetooth Speaker,Gifts for Boys & Girls,Sensory Product for Kids',
+    price: 69.99,
+    originalPrice: 129.99,
+    rating: 4.6,
+    reviewsCount: 90,
+    category: 'home',
+    image: '/images/night.PNG',
+    description: 'Galaxy projector with soothing sounds and HD disc for sensory experience.',
+    longDescription: '【16 IN 1 Galaxy Projector for Bedroom】 - Galaxy projector night light comes with 16 HD display scenarios: Moon, Solar System, Galaxy, Small Magellanic Cloud, Orion Nebula, Helix Nebula, Crab Nebula, Horsehead Nebula, Saturn, Auroral Sky, Rocket Launch, Interstellar Exploration, Blue Moon, Earth, Dinosaur Ruled Earth, Moonlit Dinosaur. Each projection card has an introduction to the galaxy, helping you know more about space and dinosaur. Note: 16 projection cards total, 1 pre-installed in the projector.',
+    features: [
+      'HD 52 MP Lens Planetarium Projector：Featuring an industrial-grade 52-megapixel lens, Space Projector captures every subtle detail of the night sky. The 7.5K Ultra HD disc lens, precision-engineered with high precision up to 0.003 using state-of-the-art photolithography, brings the universe right before your eyes. Specially designed to recreate authentic celestial scenes, bringing you a truly realistic stargazing experience.',
+      '29 Pure Sounds Baby Sound Machine – Superior Consumer Electronics Sleep Aid: White noise sound machine baby has 29 Built-in Soothing Songs: Ocean Wave, Gentle Wave, Stream, Waterfall, Light Rain, Heavy Rain, Thunderstorm, Rain on Leaves, Rain on Window, Breeze, Bird, Cricket, Frog, Summer Night Insects, Night Frogs, Campfire Crackle, Heartbeat, Singing Bowl, Meditation Melody, Piano Lullaby, White Noise, Pink Noise, Brown Noise, Static Noise, TV Snow, Fan, AC, Box Fan, Harp Melody, and Forest Wind., it effectively masks distracting environmental noise.This device is the perfect choice for managing insomnia, improving sleep quality, or creating a calming sanctuary for a nursery.',
+      '【 HIFI Portable Bluetooth Speaker for Party in Light Projector】The Bluetooth HIFI 5.3 of galaxy projector northern lights projector star projector is of great quality. Easy to connect the Bluetooth device "WH-E32".star projector galaxy light projector combines the beauty of a galaxy light projector with the immersive experience of a music-syncing Bluetooth speaker,creating a good way to relax after a busy day. Whether it\'s for kids\' bedroom,a party,or just to create a magical atmosphere at home,star projector will meet your expectations! The combination of white noise,galaxy lights,and star lights is truly amazing!',
+      '【Remote Control & Smart Auto-Off Timer Star Projector】 Take full command of your audio experience with the included remote, allowing you to adjust volume, skip tracks, and customize lighting from across the room. Star Projector night light with smart timer function (1/2/4H) ensures the device powers down automatically, making it perfect for drifting off to music without worrying about energy waste. We provide a 36-month quality guarantee and 24/7 customer support for a worry-free experience. Our Aurora Projector sound machine has undergone rigorous testing and holds FCC, CE, and RoHS certifications, so you can use it with complete confidence.',
+      '【Wide Coverage & 360° ROTATION Ceiling Projector for Bedroom】- Light Projector for Bedroom can project stars and a solar system onto walls, floors, and ceilings up to 16.4ft away (The optimal projection distance is 9.84ft), covering an area of 135-754 sq ft. Space Projector has a 360° rotation and a rotating button for the film disc to create an immersive feeling. It\'s USB powered for bedrooms, parties, weddings, and Christmas, making it an ideal gift for experiencing galaxies and nebulae at home. NOTE: THE TOP KNOB CAN ADJUST THE FOCAL LENGTH FOR CLEAR IMAGING.',
+      '【GIFTS FOR TEEN GIRLS & BOYS】Can\'t figure out what to buy for teen girl gifts trendy stuff or teen boy gifts?Just think of the kids night light projector,room lights for bedroom will be ur notable gifts.Whether U are a kids who loves northern lights projector,or an men who wants a ambient lighting,who doesn\'t want to have this dreamy birthday gifts for women?LED lights for bedroom/kids projector lights for bedroom/teen girl gifts trendy stuff is a great choice gifts for her/kids. Beautiful bedroom decor, cool stuff for your room sparkles with room light,is ideal personalized gifts for 1,,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18 year old girls & boys.'
+    ],
+    stock: 40,
+    badge: 'Home'
+  },
+  {
+    id: 'Bagotte Robot Vacuum and Mop Combo, 6000Pa Robotic Vacuums with Mapping,LiDAR Navigation, Auto-Recharging, 2.4G WiFi/App/Alexa/Remote Control for Pet Hair,Hard Floor,Carpet',
+    name: 'Bagotte Robot Vacuum and Mop Combo, 6000Pa Robotic Vacuums with Mapping,LiDAR Navigation, Auto-Recharging, 2.4G WiFi/App/Alexa/Remote Control for Pet Hair,Hard Floor,Carpet',
+    price: 99.99,
+    originalPrice: 250.99,
+    rating: 4.5,
+    reviewsCount: 120,
+    category: 'home',
+    image: '/images/robot.PNG',
+    description: 'Bagotte Robot Vacuum and Mop Combo with powerful suction and smart navigation.',
+    longDescription: '⚡𝟲𝟬𝟬𝟬𝗣𝗮 𝗨𝗟𝗧𝗥𝗔-𝗦𝗧𝗥𝗢𝗡𝗚 𝗦𝗨𝗖𝗧𝗜𝗢𝗡 𝗣𝗢𝗪𝗘𝗥： Equipped with 6000Pa high-power strong suction, this robot vacuum delivers one-pass thorough cleaning for all floor conditions. It effortlessly sucks up daily dust, food crumbs, floating pet hair, and deeply embedded stubborn dirt on hard floors and carpets, leaving your home spotless with no residue left behind.',
+    features: [
+      '🗺️𝟯𝟲𝟬° 𝗟𝗶𝗗𝗔𝗥 𝗣𝗥𝗘𝗖𝗜𝗦𝗜𝗢𝗡 𝗡𝗔𝗩𝗜𝗚𝗔𝗧𝗜𝗢𝗡： Adopting upgraded 360° LiDAR laser navigation technology, the M6 robot vacuum can instantly scan and map complex household layouts, generate high-precision home maps, and intelligently plan the most efficient cleaning routes. Compared with traditional random-cleaning vacuum robots, it improves overall cleaning efficiency by 70%, covering every corner without repeated cleaning or missing areas.',
+      '🧹𝟯-𝗜𝗡-𝟭 𝗦𝗪𝗘𝗘𝗣, 𝗩𝗔𝗖𝗨𝗨𝗠 & 𝗠𝗢𝗣 𝗖𝗟𝗘𝗔𝗡𝗜𝗡𝗚： Integrates sweeping, high-efficiency vacuuming and mopping three core functions in one machine. It realizes full-house deep cleaning for hard floors, carpets and other home surfaces, solves various daily cleaning troubles in one step, and completely frees your hands from tedious housework.',
+      '🚫𝗩𝗜𝗥𝗧𝗨𝗔𝗟 𝗡𝗢-𝗚𝗢 𝗭𝗢𝗡𝗘𝗦 𝗦𝗘𝗧𝗧𝗜𝗡𝗚𝗦： You can freely mark restricted cleaning zones via the dedicated APP. The robot vacuum will automatically identify and bypass the set areas, effectively avoiding collisions with fragile decorations, pet food bowls, stacked sundries and other obstacles, protecting your home items while ensuring orderly cleaning.',
+      '🎁𝗜𝗗𝗘𝗔𝗟 𝗚𝗜𝗙𝗧 𝗖𝗛𝗢𝗜𝗖𝗘 𝗙𝗢𝗥 𝗔𝗟𝗟 𝗢𝗖𝗖𝗔𝗦𝗜𝗢𝗡𝗦： It is an ideal practical gift for family, friends and colleagues for festivals, birthdays and housewarmings. It greatly saves housework time and reduces daily cleaning pressure, allowing your loved ones to enjoy more relaxed and comfortable leisure time.',
+   
+    ],
+    stock: 50,
+    badge: 'Home'
+  },
+  {
+    id: 'WINGBO 54 Inch DC Ceiling Fan with Lights and Remote Control, 5 Reversible Carved Wood Blades, 6-Speed Noiseless DC Motor, Modern Ceiling Fan in Brushed Nickel Finish with Gray Blades, ETL Listed',
+    name: 'WINGBO 54 Inch DC Ceiling Fan with Lights and Remote Control, 5 Reversible Carved Wood Blades, 6-Speed Noiseless DC Motor, Modern Ceiling Fan in Brushed Nickel Finish with Gray Blades, ETL Listed',
+    price: 99.99,
+    originalPrice: 179.99,
+    rating: 4.6,
+    reviewsCount: 80,
+    category: 'home',
+    image: '/images/fan.PNG',
+    description: 'Modern ceiling fan with lights, remote control, and reversible blades.',
+    longDescription: 'MINIMALIST STYLE: This 54-inch indoor ceiling fan has 5 powerful blades to make your home more comfortable; It offers a sleek, minimalistic design that blends into any modern environment. With shapely, carved wood blades, this large ceiling fan offers an ideal blend of style and function.',
+    features: [
+      'SOLID WOOD BLADES: This Sleek Ceiling Fan has a blade sweep diameter of 54” with 12° Blade Pitch. Crafted from solid wood that helps ensure highly efficient and smooth air delivery. The wood blades are resistant to warping from environmental conditions and offer a long product lifespan.',
+      '6 SPEEDS DUAL-DIRECTION FAN: The powerful ceiling fan operates on 6 forward and reverse speeds (easy to adjust with the included handheld remote). Its reversible motor allows it to turn your room into an oasis in summer as well as warming you up during winter.',
+      'LED LIGHT KIT & DC MOTOR: An integrated LED light source is included (24W, 3000K/4500K/6000K). You can use the fan with or without the light. The fan features an energy-efficient DC motor for cost efficiency savings and has convenient wall holder for remote storage. Utilising the latest advances in DC motor technology to provide amazing performance coupled with exceptional energy efficiency.',
+      'MADE FOR ANY SPACE: The 54-inch blade span makes this ceiling fan perfect for spaces like living rooms, bedrooms or larger rooms (suitable for damp places). 2 down rods (4.5” and 12” long) are included to match different ceiling heights.'
+    ],
+    stock: 40,
+    badge: 'Home'
+  },
+  {
+    id: 'Tablet｜14 inch Android 16 Tablet｜30GB RAM 256GB ROM ｜1920 * 1200 IPS FHD｜10000mAh 30W Fast Charging｜Octa-core Processor｜Wi-Fi 6, BT 5.4｜Dual Camera with Gemini AI｜Keyboard｜Stylus｜Case｜Headphone',
+    name: 'Tablet｜14 inch Android 16 Tablet｜30GB RAM 256GB ROM ｜1920 * 1200 IPS FHD｜10000mAh 30W Fast Charging｜Octa-core Processor｜Wi-Fi 6, BT 5.4｜Dual Camera with Gemini AI｜Keyboard｜Stylus｜Case｜Headphone',
+    price: 119.99,
+    originalPrice: 259.99,
+    rating: 4.7,
+    reviewsCount: 100,
+    category: 'electronics',
+    image: '/images/tablet.PNG',
+    description: '14-inch Android tablet with high RAM and storage, fast charging, and dual cameras.',
+    longDescription: '【Dual-Function 2-in-1 Tablet】URAO Android 16 Tablet is a game-changer with 2-in-1 professional work mode. The tablet is compatible with a Bluetooth keyboard, mouse, stylus, headset, and a convenient foldable case. The setup and connection process is straight forward, enabling you to effortlessly transform your tablet into either a laptop or a computer mode. Friendly Tips: Mouse does not come with batteries.',
+    features: [
+      '【High Performance】URAO Android tablet features the latest operating system Android 16 and an 2.0 GHz octa-core processor ensure of excellent performance, seamless multitasking, getting rid of annoying ads, emphasizing privacy and security by designing enhanced app permissions, providing you complete management control.',
+      '【 30GB + 256GB】Our Android tablet comes with 30GB (6+24GB) RAM 256GB ROM and maximun 1TB TF card ( not included )expandable ensures you of a fast APP launch and smooth gaming experience. URAO tablet also come with pre-installed Google Play Store, you can easily download any needed Apps such as Facebook, Twitter, Youtube, etc.',
+      '【10000mAh Battery with 30W Fast Charge】The built-in large capacity and low consumption CPU enable our URAO 14 inch tablet to stand by for up to 3 days and allows you to enjoy up to 12 hours of mixed reading, watching TV shows, playing games, surfing the web. URAO tablet dopts fast-charging technology which can be fully charged in 2.5 hour and easily charge via the USB Type-C port and rest assured the battery will last. It is a good companion for you to play and study!',
+      '【1920*1200 IPS Display】URAO 14 inch Large Screen Tablet equipped with a high resolution 1920*1200 IPS display, which shows a brightly colored wide-screen for a more realistic viewing experience with sharper and brighter images.The front 5MP and rear 8MP cameras can easily satisfy video calls, online learning, etc. The tablet LCD designed with low blue light technology, the screen flicker and irritating blue light will be reduced.',
+      '【Wi-Fi 6+Bluetooth5.4】Adopts the lastest 6th generation WiFi technology & upgraded BT5.4. Dual band integrated chips make the 5g WiFi more stable,lastest BT 5.4 connection supports all your favorite accessories, highly increased the speed of data transfer.',
+      '【Gravity Acceleration Sensor+Stereo 4 Speaker】Immersive user experience, giving you a more authentic feeling!.'
+    ],
+    stock: 30,
+    badge: 'Electronics'
+  },
+  {
+    id: 'Razor A5 Air Kick Scooter for Kids Ages 8+ - Extra-Long Deck, 8" Pneumatic Rubber Wheels, Foldable, Anti-Rattle Handlebars, for Riders up to 220 lbs',
+    name: 'Razor A5 Air Kick Scooter for Kids Ages 8+ - Extra-Long Deck, 8" Pneumatic Rubber Wheels, Foldable, Anti-Rattle Handlebars, for Riders up to 220 lbs',
+    price: 89.99,
+    originalPrice: 159.99,
+    rating: 4.6,
+    reviewsCount: 80,
+    category: 'outdoor',
+    image: '/images/scooter.jpg',
+    description: 'Kick scooter with extra-long deck and pneumatic wheels for kids.',
+    longDescription: 'Super-strong, aluminum frame with patent-pending, anti-rattle handlebars and folding system ensure a smoother, quieter ride',
+    features: [
+      'Includes easy-adjust handlebars with soft, rubber grips for enhanced comfort, grasp, and control',
+      'Extra-long, 13.4” (340 mm) deck offers more foot room, ideal for taller riders',
+      'Foldable Design: Allows for easy storage and portability, making it convenient to take on trips or store at home.',
+      'Anti-Rattle Handlebars: Ensure a secure grip and reduce vibrations during rides, enhancing safety and control.',
+      'Weight Capacity: Supports riders up to 220 lbs, making it suitable for older kids and even some adults.'
+    ],
+    stock: 15,
+    badge: 'Outdoor'
+  },
+  {
+    id: 'dynabook Portégé X40-M 14” Business Laptop, Intel Core Ultra 5 225U, 16GB DDR5 RAM, 512GB SSD, WUXGA 1920x1200, Windows 11 Pro, Lightweight 3.17 lb, Wi-Fi 7, Thunderbolt 4',
+    name: 'dynabook Portégé X40-M 14” Business Laptop, Intel Core Ultra 5 225U, 16GB DDR5 RAM, 512GB SSD, WUXGA 1920x1200, Windows 11 Pro, Lightweight 3.17 lb, Wi-Fi 7, Thunderbolt 4',
+    price: 119.99,
+    originalPrice: 399.99,
+    rating: 4.8,
+    reviewsCount: 200,
+    category: 'electronics',
+    image: '/images/laptop.jpg',
+    description: '14-inch business laptop with Intel Core Ultra 5, 16GB RAM, and 512GB SSD.',
+    longDescription: 'NEXT-GEN AI PERFORMANCE – INTEL CORE ULTRA POWER: Powered by the latest Intel Core Ultra 5 225U processor, this business-class laptop delivers advanced AI acceleration, faster multitasking, and smooth productivity performance. Ideal for professionals, executives, remote workers, and power users who need responsive computing for business applications, data processing, and multitasking workflows.',
+    features: [
+      '14” WUXGA DISPLAY – MORE SCREEN, MORE PRODUCTIVITY: Experience a 14-inch WUXGA (1920x1200) 16:10 display, providing more vertical workspace than standard Full HD. Perfect for spreadsheets, coding, browsing, and multitasking. Anti-glare technology ensures comfortable viewing in office or travel environments.',
+      'FAST DDR5 MEMORY + PCIe SSD STORAGE: Equipped with 16GB high-speed DDR5 RAM and a 512GB PCIe NVMe SSD, delivering lightning-fast boot times, seamless multitasking, and quick file access. Expandable architecture supports higher memory configurations for future scalability.',
+      'PREMIUM BUSINESS DESIGN – LIGHTWEIGHT & DURABLE: Built with a sleek aluminum alloy chassis, MIL-STD tested durability, and weighing only ~3.17 lbs, this laptop is designed for professionals on the move. Ultra-portable yet strong enough for everyday business travel. Backed by Dynabook 3-Year Standard Limited Warranty, ensuring long-term reliability and peace of mind.',
+      'ENTERPRISE-GRADE SECURITY + WINDOWS 11 PRO: Includes TPM 2.0, enterprise security features, encryption support, and Windows 11 Pro, making it ideal for corporate environments, IT-managed systems, and secure remote work. Efficient Intel architecture delivers long battery life (approx. 6–8 hours) with fast charging support, keeping you productive on the go.'
+    ],
+    stock: 10,
+    badge: 'Electronics'
+  },
+  {
+    id: 'Samsung 32-Inch Class QLED Q8F 4K UHD Smart TV (2025 Model) Q4 AI Processor, 100% Color Volume with Quantum Dot, AirSlim Design, Endless Free Content, Samsung Vision AI, Alexa Built-in',
+    name: 'Samsung 32-Inch Class QLED Q8F 4K UHD Smart TV (2025 Model) Q4 AI Processor, 100% Color Volume with Quantum Dot, AirSlim Design, Endless Free Content, Samsung Vision AI, Alexa Built-in',
+    price: 99.99,
+    originalPrice: 299.99,
+    rating: 4.7,
+    reviewsCount: 150,
+    category: 'electronics',
+    image: '/images/led.jpg',
+    description: '32-inch QLED 4K UHD Smart TV with Q4 AI Processor and Alexa built-in.',
+    longDescription: 'POWERS DRAMATICALLY CLEAR COLOR AND SOUND: Enjoy your movies and shows in stunning 4K, regardless of the source resolution. Plus, get the most out of what you\'re watching with AI-optimized color-boosted picture and audio quality, enhanced according to the type of content',
+    features: [
+      'OVER A BILLION COLORS THAT STAY TRUE, EVEN IN THE BRIGHTEST SCENES**: Appreciate every beautiful shade of color with incredible precision. The nano-sized Quantum Dots can display the entire color spectrum, **so you can admire billions of shades at any brightness level.',
+      'SLEEK AND SLIM DESIGN FOR A LOW-PROFILE: This TV blends right into your wall with a slim design and brings clutter-free minimalism to any room.',
+      'A WORLD OF CONTENT AT YOUR FINGERTIPS. NO SUBSCRIPTION REQUIRED: Watch 2,700+ free channels including 400+ Samsung TV Plus premium channels and on free streaming apps. Enjoy national and local news, sports, movies and more. Explore new content being added regularly.',
+      'BRINGS SMOOTH MOTION TO SPORTS AND TEAR-FREE GAMING: Experience smooth visuals and elite speeds for VRR gaming at up to 4K 144Hz.',
+      'Alexa Built-in: Control your TV and smart home devices with voice commands using Alexa.'
+    ],
+    stock: 25,
+    badge: 'Electronics'
+  },
+  {
+    id: 'Paint Sprayer for House Painting, 1000W Electric Spray Paint Gunwith 1400ML Container,6 Nozzles,3 Patterns,LED Light,Easy to Clean,for Furniture,Cabinets,Fence,Walls,Door,DIY Projects',
+    name: 'Paint Sprayer for House Painting, 1000W Electric Spray Paint Gunwith 1400ML Container,6 Nozzles,3 Patterns,LED Light,Easy to Clean,for Furniture,Cabinets,Fence,Walls,Door,DIY Projects',
+    price: 59.99,
+    originalPrice: 99.99,
+    rating: 4.5,
+    reviewsCount: 90,
+    category: 'home',
+    image: '/images/paint.jpg',
+    description: 'Electric paint sprayer for house painting and DIY projects.',
+    longDescription: '【1000W Ultra-Powerful Performance】CUIOFREE Paint Sprayer is built with a powerful 1000W copper motor, delivering a high spray output of up to 1200ml/min. Spray 200-480 sq.ft in just 15 minutes, much faster than traditional rollers or brushes. Making it perfect for walls, fences, furniture, chair and large home renovation projects',
+    features: [
+      '【6 Nozzles & 3 Spray Patterns】Our paint sprayer for house painting includes 6 nozzle sizes (0.8mm, 1.2mm, 1.8mm, 2.0mm, 2.5mm, 1.8mm) to meet your DIY project needs on a variety of surfaces, ideal for house painting, furniture, fences, cabinets, walls, doors, chairs, and more.This spray paint gun supports 3 adjustable spray patterns—horizontal, vertical, and circular, making it suitable for a wide range of applications',
+      '【6 Nozzles & 3 Spray Patterns】Includes 6 interchangeable nozzles and 3 adjustable spray patterns (horizontal, vertical, and circular) to accommodate different painting needs and achieve precise coverage.',
+      '【Upgraded 1400ML Container】The electric paint sprayer with a large 1400ml (47 fl.oz) container reduces the need for refills, making your workflow more efficient. Ideal for large DIY projects, uninterrupted spraying saves time and ensures a more even coating',
+      '【Adjustable Flow Control】This hvlp paint sprayer is equipped with a flow control knob that allows you to fine-tune the paint output to suit the needs of different projects. Adjusting the flow on your paint sprayer helps reduce overspray and paint waste, giving you a smooth, consistent finish every time.',
+      '【Easy to Use & Clean】This spray paint gun features tool-free assembly, with fully detachable parts for deep cleaning. Even if you are a beginner, you can easily get started after reading the manual. It is very important to clean the handheld paint sprayer thoroughly after use; it comes with a cleaning brush and a nozzle needle to remove residue, enabling thorough cleaning after every project.'
+    ],
+    stock: 35,
+    badge: 'Home'
+  },
+  {
+    id:'Steam Cleaner, 3-Level Adjustable Handle 1500W Steamer for Cleaning15s Heat-Up, Rolling System, Portable Steamer for Cleaning with Mop & 17-Piece Kit for Home, Car, Grout, Tile, Couch, Kitchen',
+    name:'Steam Cleaner, 3-Level Adjustable Handle 1500W Steamer for Cleaning15s Heat-Up, Rolling System, Portable Steamer for Cleaning with Mop & 17-Piece Kit for Home, Car, Grout, Tile, Couch, Kitchen',
+    price: 89.99,
+    originalPrice: 149.99,
+    rating: 4.6,
+    reviewsCount: 110,
+    category: 'home',
+    image: '/images/steam.jpg',
+    description: '1500W steam cleaner with adjustable handle and 17-piece kit for versatile cleaning.',
+    longDescription: 'Powerful Steam Cleaning: Harness 1500W of steam power to generate 3Bar high-pressure steam at 221°F in just 15 seconds—no chemicals needed. This superheated steam penetrates and dissolves stubborn grease, grime, and dirt across multiple surfaces. Safe for homes with kids and pets, it offers an eco-friendly clean that’s both deep and gentle.',
+    features: [
+      'Large Tank & Long Runtime: Designed for extended cleaning sessions, the 1.69-quart (1600ML) tank provides up to 45 minutes of continuous steam. The top-flip filling minimizes spills, and the bottom drain ensures easy water disposal. Spend less time refilling and more time cleaning entire rooms, floors, or vehicles without interruption.',
+      'Smart Steam Control: Gain full cleaning control with three adjustable steam levels, accessible via the upgraded remote-control handle. LED indicator lights and a clear display help you match steam intensity to the task—whether delicate fabrics or tough kitchen stains. Powered by 2 AAA batteries, the handle ensures effortless operation and customized performance.',  
+    'Complete 17-Piece Kit: Tackle any cleaning challenge with a professional 17-piece accessory set, including brass and nylon brushes, extension tubes, microfiber mop pads, and a floor brush. The 78-inch steam hose and power cord offer 50% more reach than standard models, letting you clean ceilings, under furniture, car interiors, and grout with ease.',
+    'Portable & Safe Design:Engineered for convenience, this steamer features a compact body, smooth-rolling wheels, and an ergonomic handle for easy transport and storage. Built-in safety includes child lock protection and auto-shutoff when water is low or pressure is high. Ideal for sealed wood, tile, appliances, upholstery, and autos—all without.'
+    ],
+    stock: 20,
+    badge: 'Home'
+  },
+  {
+    id: '2 in 1 Hair Steamer for Natural Hair & Ozone Facial Steamer 2-in-1 hair and facial steamer for deep conditioning natural hair and daily skincare,for Personal Care Use at Home or Salon',
+    name: '2-in-1 Hair Steamer for Natural Hair & Ozone Facial Steamer 2-in-1 hair and facial steamer for deep conditioning natural hair and daily skincare,for Personal Care Use at Home or Salon',
+    price: 69.99,
+    originalPrice: 119.99,
+    rating: 4.5,
+    reviewsCount: 80,
+    category: 'personal-care',
+    image: '/images/hair.jpg',
+    description: '2-in-1 hair and facial steamer for deep conditioning natural hair and daily skincare.',
+    longDescription: 'Hair steamer for natural hair: provide valuable nutrient to unhealthy hair, prevents breakage and split ends, treating brittle&damaged hair; Facial steamer: Opens and unclogs your pores, allows you to remove dirt, oil and grime from your skin; Melts away dead skin cells, replace chemical exfoliating scrubs & peels; Make toner, cream and other nutrients absorbable. Aromatherapy diffusing function is provided.',
+    features: [
+      'The difference between Kingsteam 2 in 1 facial steamer and market is that we takes the advanced PTC ceramic heating element to vaporize clean water and produce a visibly strong steam instantly. Ample and directed micro-fine steams penetrate deeply into all your hair and skin layers. Plus ozone generated Ion water particles can be up to 10x more effective in penetrating hair and skin..',
+      'Auto-off function:Built-in safety protection automatically shuts off the steamer when water runs low and overheating occurs. For safe, switch to “OFF” or unplug the unit after use. Note: Any moisture found inside the product packaging is from factory quality testing and won\'t affect normal use',
+      'Conveniently sized: This is professional-quality machine of hair steamer for black hair also delivers convenient portability, ideally suited for use at the salon, at home, or while traveling.',
+      'Conveniently sized: This is professional-quality machine of hair steamer for black hair also delivers convenient portability, ideally suited for use at the salon, at home, or while traveling..'
+    ],
+    stock: 30,
+    badge: 'Personal Care'
+  },
+  {
+    id: 'Nuanchu Salon Rolling Cart with Storage, Epa Certified Wood, Beauty Spa UseUniversal Wheels, 2-tierd Wood Mobile Spa Trolley, 2 Drawers + 1 Tray, White Beauty Esthetician Cart for Nail Tech, Skincare',
+    name: 'Nuanchu Salon Rolling Cart with Storage, Epa Certified Wood, Beauty Spa UseUniversal Wheels, 2-tierd Wood Mobile Spa Trolley, 2 Drawers + 1 Tray, White Beauty Esthetician Cart for Nail Tech, Skincare',
+    price: 79.99,
+    originalPrice: 129.99,
+    rating: 4.6,
+    reviewsCount: 70,
+    category: 'personal-care',
+    image: '/images/salon.jpg',
+    description: 'Salon rolling cart with storage, universal wheels, and multiple tiers for beauty and spa use.',
+    longDescription: 'EPA Certified Material & Clean White Look: Made with EPA certified low-emission wood materials, this Mobile Beauty Trolley is safe, durable, and suitable for everyday salon or home use. The trolley features a clean all-white finish with a modern minimalist look, making it a practical esthetician cart for storing skincare, makeup, spa tools essentials.',
+    features: [
+      '2-Tier Storage with Tray and Drawers: Designed with overall dimensions of 31.5 in (H) x 15.7 in (W) x 15.7 in (D), this organizer features a spacious top tray, an open middle shelf, and 2 pull-out drawers to keep bottles, towels, tools, and accessories neatly arranged. It works well as a pedicure cart, pedicure table side organizer, or nail cart, helping nail techs keep frequently used items within easy reach during treatments',
+      '4 X 360° Smooth Rotatable Wheels: Equipped with 4 universal wheels, this salon trolley cart with wheels moves smoothly between treatment rooms, spa corners, and home beauty spaces. The 360° rotatable design makes it easy to change direction, while the stable wheel structure helps keep supplies secure during daily salon, spa, or skincare work',
+      'Rounded Design for Safer Daily Use: The rounded side frame and raised tray edges help reduce bumps and prevent items from slipping off during movement. This compact trolley cart can be used as a lash cart, salon cart, or pedicure cart in salons, facial rooms, manicure stations, and skincare setups, offering both safety and convenience in beauty work.',
+      'Versatile for Nail, Spa, and Beauty Use: Suit for beauty salons, spa rooms, nail stations, tattoo studios, and home organization, this pedicure cart for nail tech supports a wide range of beauty routines. Use it for makeup, skincare, waxing, facial tools, or hair accessories. It is also a practical hair tool organizer and spa storage systems solution for compact spaces',
+      
+    ],
+    stock: 15,
+    badge: 'Personal Care'
+  },
+  {
+    id: 'Iswee Genuine Leather Purses for Women Shoulder Handbags Designer Hobo Crossbody Purse Top Handle Purse',
+    name: 'Iswee Genuine Leather Purses for Women Shoulder Handbags Designer Hobo Crossbody Purse Top Handle Purse',
+    price: 69.99,
+    originalPrice: 99.99,
+    rating: 4.7,
+    reviewsCount: 90,
+    category: 'fashion',
+    image: '/images/bag.jpg',
+    description: 'Genuine leather purses for women with shoulder straps and crossbody design.',
+    longDescription: 'EFFICIENTLY ORGANIZED & SLEEK IN DESIGN—This crossbody bag keeps essentials neatly arranged with a zip pocket and an opposing slip pocket for quick phone access. Its minimalist design, smooth hardware, and tailored silhouette offer a clean, modern look that works seamlessly from day to night.',
+    features: [
+      'TWO STRAPS, ENDLESS STYLES — This leather bag includes two adjustable, detachable straps: a boho woven strap (33.66–55.49 in) for casual wear, and a polished leather strap (42.52–51.97 in) for refined looks. Switch easily between shoulder and crossbody carry to match any occasion—from work and travel to weekends and dates. Designed to adapt in an instant.Spacious Interior: The purse features a roomy interior with multiple compartments, allowing you to organize your essentials such as wallet, phone, keys, and makeup.',
+      'BALANCED PROPORTIONED FOR DAILY ESSENTIALS — At 9.84”L x 3.15”W x 6.69”H, weighs 0.772 pounds，this compact shoulder bag fits comfortably close to your body while holding your phone, wallet, keys, and small daily items without bulk. Designed for polished, on-the-go organization.',
+      'A THOUGHTFUL GIFT FOR ANYONE YOU LOVE — Thoughtfully crafted for someone special—or for yourself. Perfect for Christmas, Mother‘s Day, birthdays and beyond, this leather crossbody handbag makes a heartfelt gift for a partner, parent, friend, or you. Designed to carry day to day, it\'s both a celebration and a companion for what matters most.',
+      'HANDCRAFTED UNIQUENESS – Please note that each bag is individually hand-stained, making every piece uniquely yours. Slight color variations may occur due to lighting and natural leather texture. Additionally, as a handmade product, measurements may vary within a normal range of 0.39–1.18 inches. This artisan touch ensures no two bags are exactly alike, adding to its character and charm.'
+    ],
+    stock: 25,
+    badge: 'Fashion'
   }
 ];
