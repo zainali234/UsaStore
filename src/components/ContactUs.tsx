@@ -157,7 +157,7 @@ export default function ContactUs({ onBackToCatalog }: ContactUsProps) {
             <div className="bg-slate-900/50 border border-slate-800 rounded-2xl p-5 flex gap-3 text-xs text-slate-400">
               <AlertTriangle className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
               <p className="leading-normal">
-                For prompt cashback updates, please provide your <strong className="text-white">17-digit Amazon Order ID</strong> in your tickets so we can quickly verify seller-partner registers.
+                For prompt cashback updates, please provide your <strong className="text-white">17-digit MZ Order ID</strong> in your tickets so we can quickly verify seller-partner registers.
               </p>
             </div>
 
@@ -210,13 +210,13 @@ export default function ContactUs({ onBackToCatalog }: ContactUsProps) {
                       </div>
 
                       <div className="space-y-1.5">
-                        <label htmlFor="form-orderId" className="text-xs font-bold text-slate-300 block">Amazon Order ID (Optional)</label>
+                        <label htmlFor="form-orderId" className="text-xs font-bold text-slate-300 block">MZ Order ID (Optional)</label>
                         <input
                           id="form-orderId"
                           type="text"
                           placeholder="114-1234567-1234567"
                           value={formData.amazonOrderId}
-                          onChange={(e) => setFormData(prev => ({ ...prev, amazonOrderId: e.target.value }))}
+                          onChange={(e) => setFormData(prev => ({ ...prev, mzOrderId: e.target.value }))}
                           className="w-full px-4 py-3 bg-slate-950 border border-slate-800 rounded-xl text-xs sm:text-sm text-slate-100 placeholder-slate-600 focus:outline-hidden focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-all font-mono"
                         />
                       </div>
