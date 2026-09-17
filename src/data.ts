@@ -918,7 +918,7 @@ export const PRODUCTS: Product[] = [
  {
     id: 'Contixo F23 GPS Drone With Camera, 46 Min Flight Time, 4.5" Screen Remote, Follow Me, Waypoints, 5GHz FPV Transmission, Return to Home, Hand Gestures, Orbit Mode Foldable Drones For Teens & Adults',
     name: 'Contixo F23 GPS Drone With Camera, 46 Min Flight Time, 4.5" Screen Remote, Follow Me, Waypoints, 5GHz FPV Transmission, Return to Home, Hand Gestures, Orbit Mode Foldable Drones For Teens & Adults',
-    price: 80.99,
+    price: 99.99,
     originalPrice: 150.99,
     rating: 4.9,
     reviewsCount: 89,
@@ -1144,7 +1144,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'Ninja Fresh Brew Coffee Maker, 12 Cup Glass Carafe, Stainless Steel, CE251 Programmable, Classic & Rich brew, 70-oz. Removable Water Reservoir, Small Batch, 24-hr Delay Brew, Adjustable Warming Plate',
     name: 'Ninja Fresh Brew Coffee Maker, 12 Cup Glass Carafe, Stainless Steel, CE251 Programmable, Classic & Rich brew, 70-oz. Removable Water Reservoir, Small Batch, 24-hr Delay Brew, Adjustable Warming Plate',
-    price: 89.99,
+    price: 95.99,
     originalPrice: 149.99,
     rating: 4.5,
     reviewsCount: 85,
@@ -1636,5 +1636,25 @@ export const PRODUCTS: Product[] = [
     ],
     stock: 25,
     badge: 'Fashion'
+  },
+  {
+    id: 'Walking Pad Treadmill, BestGod Incline Under Desk Treadmill 330lbs Capacity, 2.5HP Portable Treadmills for Home, Compact Treadmills Mini Running Machine with Remote Control',
+    name: 'Walking Pad Treadmill, BestGod Incline Under Desk Treadmill 330lbs Capacity, 2.5HP Portable Treadmills for Home, Compact Treadmills Mini Running Machine with Remote Control',
+    price: 99.99,
+    originalPrice: 199.99,
+    rating: 4.6,
+    reviewsCount: 100,
+    category: 'fitness',
+    image: '/images/walk.PNG',
+    description: 'Compact treadmill with incline feature and remote control for home use.',
+    longDescription: '【2.5HP Powerful Motor】The BestGod Walking Pad Treadmill is equipped with a 2.5HP motor that provides smooth and quiet operation, allowing you to walk or jog without disturbing others in your home. The treadmill can support a maximum weight capacity of 330lbs, making it suitable for a wide range of users.',
+    features: [
+      '【Incline Feature】This treadmill offers an incline feature that allows you to adjust the walking surface to simulate uphill walking, providing a more challenging workout and helping to target different muscle groups.',
+      '【Compact and Portable】The treadmill is designed to be compact and portable, making it easy to store when not in use. It can fit under a desk or in a small space, making it ideal for home offices or apartments.',
+      '【Remote Control】The included remote control allows you to easily adjust speed and incline settings without having to stop your workout, providing convenience and ease of use.',
+      '【Safety Features】The treadmill includes safety features such as an emergency stop button and a safety key that can be attached to your clothing, ensuring a safe workout experience.'
+    ],
+    stock: 20,
+    badge: 'Fitness'
   }
 ];
