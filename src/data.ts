@@ -1929,7 +1929,7 @@ export const PRODUCTS: Product[] = [
     id: 'NeverClog Cold Press Juicer, 24oz Jug, 36oz Pulp, Navy, JC151NV',
     name: 'NeverClog Cold Press Juicer',
     price: 89.99,
-    originalPrice: 199.99,
+    originalPrice: 199.89,
     rating: 4.8,
     reviewsCount: 120,
     category: 'home',
